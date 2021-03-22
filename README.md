@@ -1,2 +1,2 @@
-# PHYS_5070
+# PHYS-5070
 Final project
