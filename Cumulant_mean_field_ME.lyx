@@ -1,0 +1,1552 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass revtex4-1
+\begin_preamble
+\usepackage{amsfonts}
+\usepackage{palatino}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!100!black},
+    urlcolor={blue!100!black}
+}
+%\usepackage[backend=biber,style=ieee, maxnames=1]{biblatex}
+
+%\usepackage{unicode-math}
+%\setmathfont{XITS Math}
+%\setmathfont[version=setB,StylisticSet=1]{XITS Math}
+%\mathversion{setB}
+\usepackage[mathscr]{eucal}
+\end_preamble
+\options prl,notitlepage
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Mean-Field Approximation and Cumulant Expansion for a Generic Spin Hamiltonian
+\end_layout
+
+\begin_layout Author
+
+\lang british
+A.
+ M.
+ Rey, E.
+ C.
+ Chaparro
+\end_layout
+
+\begin_layout Author Email
+
+	edch5956@colorado.edu
+\end_layout
+
+\begin_layout Affiliation
+
+\lang british
+Department of Physics, University of Colorado, Boulder
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Generic Spin Hamiltonian with Dissipation
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Consider the following generic system hamiltonian of 
+\begin_inset Formula $N$
+\end_inset
+
+ written in the form: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\hat{H}_{{\rm S}} & =\sum_{i}\overrightarrow{h_{i}}\cdot\overrightarrow{\hat{\sigma}_{i}}+\sum_{jk\beta\varepsilon}A_{jk}\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon},\\
+\overrightarrow{\hat{\sigma}_{i}} & =\left(\hat{\sigma}_{i}^{x},\hat{\sigma}_{i}^{y},\hat{\sigma}_{i}^{z}\right),\\
+\beta,\varepsilon & \in\left\{ x,y,z\right\} ,\\
+\hat{\sigma}_{i}^{x} & =\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix},\\
+\hat{\sigma}_{i}^{y} & =\begin{pmatrix}0 & -{\rm i}\\
+{\rm i} & 0
+\end{pmatrix},\\
+\hat{\sigma}_{i}^{z} & =\begin{pmatrix}1 & 0\\
+0 & -1
+\end{pmatrix}.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+here the set of 
+\begin_inset Formula $\overrightarrow{h_{i}}$
+\end_inset
+
+ can be seen as a 
+\begin_inset Formula $N\times3$
+\end_inset
+
+ matrix and 
+\begin_inset Formula $A$
+\end_inset
+
+ is a matrix of size 
+\begin_inset Formula $N\times N$
+\end_inset
+
+ which summarizes the interaction terms between the qubits(spins).
+ In order to introduce a dissipation term we write the Linblandian operators
+ of the system as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\mathcal{L} & \Rightarrow\sqrt{\gamma_{+}}\hat{\sigma}_{i}^{+},\sqrt{\gamma_{-}}\hat{\sigma}_{i}^{-},\sqrt{\gamma_{z}}\hat{\sigma}_{i}^{z},\\
+\hat{\sigma}_{i}^{+} & =\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix},\\
+\hat{\sigma}_{i}^{-} & =\begin{pmatrix}0 & 0\\
+2 & 0
+\end{pmatrix},\\
+\hat{\sigma}_{i}^{z} & =\begin{pmatrix}1 & 0\\
+0 & -1
+\end{pmatrix},\\
+\mathcal{L}\left[\hat{\rho}\right] & =-\sum_{i,\eta}\gamma_{\eta}\left(\hat{\rho}\hat{A}_{i}^{\dagger\eta}\hat{A}_{i}^{\eta}+\hat{A}_{i}^{\dagger\eta}\hat{A}_{i}^{\eta}\hat{\rho}-2\hat{A}_{i}^{\eta}\hat{\rho}\hat{A}_{i}^{\dagger\eta}\right),\\
+\hat{A}_{i}^{\eta} & =\hat{\sigma}_{i}^{\eta},\eta\!\in\!\left\{ +,-,z\right\} .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ The final form of the master equation to consider is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\frac{\partial\hat{\rho}}{\partial t} & =-\frac{{\rm i}}{\hbar}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]-\sum_{i,\eta}\gamma_{\eta}\left(\hat{\rho}\hat{A}_{i}^{\dagger\eta}\hat{A}_{i}^{\eta}+\hat{A}_{i}^{\dagger\eta}\hat{A}_{i}^{\eta}\hat{\rho}-2\hat{A}_{i}^{\eta}\hat{\rho}\hat{A}_{i}^{\dagger\eta}\right)\\
+ & =-\frac{{\rm i}}{\hbar}\left[H_{{\rm S}},\hat{\rho}\right]-\sum_{i,\eta}\gamma_{\eta}\left(\left\{ \rho,\hat{A}_{i}^{\dagger\eta}\hat{A}_{i}^{\eta}\right\} -2\hat{A}_{i}^{\eta}\rho\hat{A}_{i}^{\dagger\eta}\right).\label{eq:OrigME}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ We introduce now a set of simplifications that can be useful for posterior
+ computations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\sum_{i,\eta}\gamma_{\eta}\hat{A}_{i}^{\dagger\eta}\hat{A}_{i}^{\eta} & =\sum_{i}\sum_{\eta}\gamma_{\eta}\hat{A}_{i}^{\dagger\eta}\hat{A}_{i}^{\eta},\\
+\hat{\sigma}_{i}^{\dagger+}\hat{\sigma}_{i}^{+} & =\begin{pmatrix}0 & 0\\
+2 & 0
+\end{pmatrix}\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\\
+ & =\begin{pmatrix}0 & 0\\
+0 & 4
+\end{pmatrix}\\
+ & =4\frac{\hat{\mathbb{I}}-\hat{\sigma}_{i}^{z}}{2}\\
+ & =2\left(\hat{\mathbb{I}}-\hat{\sigma}_{i}^{z}\right),\\
+\hat{\sigma}_{i}^{\dagger-}\hat{\sigma}_{i}^{-} & =\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\begin{pmatrix}0 & 0\\
+2 & 0
+\end{pmatrix}\\
+ & =\begin{pmatrix}4 & 0\\
+0 & 0
+\end{pmatrix}\\
+ & =2\left(\hat{\mathbb{I}}+\hat{\sigma}_{i}^{z}\right),\\
+\hat{\sigma}_{i}^{\dagger z}\hat{\sigma}_{i}^{z} & =\hat{\mathbb{I}},\\
+\sum_{\eta}\gamma_{\eta}\hat{A}_{i}^{\dagger\eta}\hat{A}_{i}^{\eta} & =\gamma_{+}2\left(\hat{\mathbb{I}}-\hat{\sigma}_{i}^{z}\right)+\gamma_{-}2\left(\hat{\mathbb{I}}+\hat{\sigma}_{i}^{z}\right)+\gamma_{z}\hat{\mathbb{I}}\\
+ & =\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\hat{\mathbb{I}}+2\left(\gamma_{-}-\gamma_{+}\right)\hat{\sigma}_{i}^{z}.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Then the master equation 
+\begin_inset Formula $\eqref{eq:OrigME}$
+\end_inset
+
+ simplifies to:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\frac{\partial\hat{\rho}}{\partial t} & =-\frac{{\rm i}}{\hbar}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]-\sum_{i}\left(\left\{ \hat{\rho},\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\hat{\mathbb{I}}+2\left(\gamma_{-}-\gamma_{+}\right)\hat{\sigma}_{i}^{z}\right\} \right)+\sum_{i,\eta}2\gamma_{\eta}\hat{A}_{i}^{\eta}\hat{\rho}\hat{A}_{i}^{\dagger\eta}\\
+ & =-\frac{{\rm i}}{\hbar}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]-\sum_{i}\left(\left\{ \hat{\rho},\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\hat{\mathbb{I}}\right\} +\left\{ \hat{\rho},2\left(\gamma_{-}-\gamma_{+}\right)\hat{\sigma}_{i}^{z}\right\} \right)+\sum_{i,\eta}2\gamma_{\eta}\hat{A}_{i}^{\eta}\hat{\rho}\hat{A}_{i}^{\dagger\eta}\\
+ & =-\frac{{\rm i}}{\hbar}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\hat{\rho}-2\left(\gamma_{-}-\gamma_{+}\right)\sum_{i}\left\{ \hat{\rho},\hat{\sigma}_{i}^{z}\right\} +\sum_{i,\eta}2\gamma_{\eta}\hat{A}_{i}^{\eta}\hat{\rho}\hat{A}_{i}^{\dagger\eta}.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Mean-Field Approximation
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Using the evolution equation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\partial_{t}\left\langle \hat{\sigma}_{i}^{\alpha}\left(t\right)\right\rangle ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\partial_{t}\hat{\rho}\right).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and the mean-field asymption on 
+\begin_inset Formula $\rho$
+\end_inset
+
+ of the form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\hat{\rho}=\otimes_{i}\hat{\rho}_{i}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then we can find that:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\partial_{t}\hat{\rho}\right) & ={\rm Tr}\left(\!\hat{\sigma}_{i}^{\alpha}\!\left(\!-\frac{{\rm i}}{\hbar}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\hat{\rho}-2\left(\gamma_{-}\!-\gamma_{+}\right)\sum_{i}\left\{ \hat{\rho},\hat{\sigma}_{i}^{z}\right\} +\sum_{i,\eta}2\gamma_{\eta}\hat{A}_{i}^{\eta}\hat{\rho}\hat{A}_{i}^{\dagger\eta}\!\right)\!\right)\\
+ & =-\frac{{\rm i}}{\hbar}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]\right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)\sum_{j}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left\{ \hat{\rho},\hat{\sigma}_{j}^{z}\right\} \right)\\
+ & \,\,\,\,\,+\sum_{j,\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\hat{A}_{j}^{\dagger\eta}\right),\\
+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left\{ \hat{\rho},\hat{\sigma}_{j}^{z}\right\} \right) & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\rho}\hat{\sigma}_{j}^{z}+\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\hat{\rho}\right)\\
+ & ={\rm Tr}\left(\hat{\sigma}_{j}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\hat{\rho}\right)\\
+ & =\delta_{ij}\left({\rm Tr}\left(\hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{i}^{z}\hat{\rho}\right)\right)+(1-\delta_{ij})\left({\rm Tr}\left(\hat{\sigma}_{j}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\hat{\rho}\right)\right)\\
+ & =\delta_{ij}\left({\rm Tr}\left(\hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}_{i}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{i}^{z}\hat{\rho}_{i}\right)\right)+2(1-\delta_{ij}){\rm Tr}\left(\hat{\sigma}_{j}^{z}\hat{\rho}_{j}\right){\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\rho}_{i}\right),\\
+{\rm Tr}\left(\hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}_{i}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{i}^{z}\hat{\rho}_{i}\right) & =2\delta_{z\alpha},\\
+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left\{ \hat{\rho},\hat{\sigma}_{j}^{z}\right\} \right) & =2\delta_{ij}\delta_{z\alpha}+2(1-\delta_{ij})\left\langle \hat{\sigma}_{j}^{z}\right\rangle \left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle ,\\
+\sum_{j}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left\{ \hat{\rho},\hat{\sigma}_{j}^{z}\right\} \right) & =\sum_{j}\left(\delta_{ij}\delta_{z\alpha}+2(1-\delta_{ij})\left\langle \hat{\sigma}_{j}^{z}\right\rangle \left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle \right)\\
+ & =\delta_{z\alpha}-2\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +2\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle \sum_{j}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & =\delta_{z\alpha}-2\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle \left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\sum_{j}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right),\\
+2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\hat{A}_{j}^{\dagger\eta}\right) & =2\gamma_{\eta}{\rm Tr}\left(\hat{A}_{j}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\right)\\
+ & =\left(1-\delta_{ij}\right)2\gamma_{\eta}{\rm Tr}\left(\hat{A}_{j}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\right)+\delta_{ij}2\gamma_{\eta}{\rm Tr}\left(\hat{A}_{j}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\right)\\
+ & =\left(1-\delta_{ij}\right)2\gamma_{\eta}{\rm Tr}\left(\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}_{j}\right){\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\rho}_{i}\right)+\delta_{ij}2\gamma_{\eta}{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{\eta}\hat{\rho}_{i}\right),\\
+{\rm Tr}\left(\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}_{j}\right) & =\delta_{+\eta}{\rm Tr}\left(2\left(\hat{\mathbb{I}}+\hat{\sigma}_{j}^{z}\right)\hat{\rho}_{j}\right)+\delta_{-\eta}{\rm Tr}\left(2\left(\hat{\mathbb{I}}-\hat{\sigma}_{j}^{z}\right)\hat{\rho}_{j}\right)+\delta_{z\eta}{\rm Tr}\left(\hat{\mathbb{I}}\hat{\rho}_{j}\right)\\
+ & =2\delta_{+\eta}{\rm Tr}\left(\left(\hat{\mathbb{I}}+\hat{\sigma}_{j}^{z}\right)\hat{\rho}_{j}\right)+2\delta_{-\eta}{\rm Tr}\left(\left(\hat{\mathbb{I}}-\hat{\sigma}_{j}^{z}\right)\hat{\rho}_{j}\right)+\delta_{z\eta}{\rm Tr}\left(\hat{\mathbb{I}}\hat{\rho}_{j}\right)\\
+ & =2\delta_{+\eta}+2\delta_{-\eta}+\delta_{z\eta}+2\left(\delta_{+\eta}-\delta_{-\eta}\right)\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & =2\delta_{+\eta}+2\delta_{-\eta}+2\delta_{z\eta}-\delta_{z\eta}+2\left(\delta_{+\eta}-\delta_{-\eta}\right)\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & =2-\delta_{z\eta}+2\left(\delta_{+\eta}-\delta_{-\eta}\right)\left\langle \hat{\sigma}_{j}^{z}\right\rangle ,\\
+{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{\eta}\hat{\rho}_{i}\right) & =\delta_{+\eta}{\rm Tr}\left(\hat{A}_{i}^{\dagger+}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{+}\hat{\rho}_{i}\right)+\delta_{-\eta}{\rm Tr}\left(\hat{A}_{i}^{\dagger-}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{-}\hat{\rho}_{i}\right)+\delta_{z\eta}{\rm Tr}\left(\hat{A}_{i}^{\dagger z}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{z}\hat{\rho}_{i}\right),\\
+\left(\sigma_{i}^{\pm}\right)^{2} & =0,\\
+{\rm Tr}\left(\hat{A}_{i}^{\dagger+}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{+}\hat{\rho}_{i}\right) & =\delta_{+\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger+}\hat{\sigma}_{i}^{+}\hat{A}_{i}^{+}\hat{\rho}_{i}\right)+\delta_{-\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger+}\hat{\sigma}_{i}^{-}\hat{A}_{i}^{+}\hat{\rho}_{i}\right)+\delta_{z\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger+}\hat{\sigma}_{i}^{z}\hat{A}_{i}^{+}\hat{\rho}_{i}\right)\\
+ & =\delta_{z\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger+}\hat{\sigma}_{i}^{z}\hat{A}_{i}^{+}\hat{\rho}_{i}\right)\\
+ & =\delta_{z\alpha}{\rm Tr}\left(2\left(\hat{\mathbb{I}}-\hat{\sigma}_{i}^{z}\right)\hat{\rho}_{i}\right)\\
+ & =2\delta_{z\alpha}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right),\\
+{\rm Tr}\left(\hat{A}_{i}^{\dagger-}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{-}\hat{\rho}_{i}\right) & =\delta_{+\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger-}\hat{\sigma}_{i}^{+}\hat{A}_{i}^{-}\hat{\rho}_{i}\right)+\delta_{-\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger-}\hat{\sigma}_{i}^{-}\hat{A}_{i}^{-}\hat{\rho}_{i}\right)+\delta_{z\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger-}\hat{\sigma}_{i}^{z}\hat{A}_{i}^{-}\hat{\rho}_{i}\right)\\
+ & =\delta_{z\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger-}\hat{\sigma}_{i}^{z}\hat{A}_{i}^{-}\hat{\rho}_{i}\right)\\
+ & =-2\delta_{z\alpha}{\rm Tr}\left(\left(\hat{\mathbb{I}}+\hat{\sigma}_{i}^{z}\right)\hat{\rho}_{i}\right)\\
+ & =-2\delta_{z\alpha}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right),\\
+{\rm Tr}\left(\hat{A}_{i}^{\dagger z}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{z}\hat{\rho}_{i}\right) & =\delta_{+\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger z}\hat{\sigma}_{i}^{+}\hat{A}_{i}^{z}\hat{\rho}_{i}\right)+\delta_{-\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger z}\hat{\sigma}_{i}^{-}\hat{A}_{i}^{z}\hat{\rho}_{i}\right)+\delta_{z\alpha}{\rm Tr}\left(\hat{A}_{i}^{\dagger z}\hat{\sigma}_{i}^{z}\hat{A}_{i}^{z}\hat{\rho}_{i}\right),\\
+\hat{\sigma}_{i}^{\dagger z}\hat{\sigma}_{i}^{\pm}\hat{\sigma}_{i}^{z} & =\hat{\sigma}_{i}^{\dagger z}\left(\hat{\sigma}_{i}^{x}\pm{\rm i}\hat{\sigma}_{i}^{y}\right)\hat{\sigma}_{i}^{z}\\
+ & =\hat{\sigma}_{i}^{z}\left(\hat{\sigma}_{i}^{x}\pm{\rm i}\hat{\sigma}_{i}^{y}\right)\hat{\sigma}_{i}^{z}\\
+ & =\hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{x}\hat{\sigma}_{i}^{z}\pm{\rm i}\hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{y}\hat{\sigma}_{i}^{z}\\
+ & ={\rm i}\hat{\sigma}_{i}^{y}\hat{\sigma}_{i}^{z}\pm{\rm i}\hat{\sigma}_{i}^{z}{\rm i}\hat{\sigma}_{i}^{x}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+ & ={\rm i}^{2}\hat{\sigma}_{i}^{x}\pm{\rm i}{\rm i}^{2}\hat{\sigma}_{i}^{y}\\
+ & =-\hat{\sigma}_{i}^{\pm},\\
+{\rm Tr}\left(\hat{A}_{i}^{\dagger z}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{z}\hat{\rho}_{i}\right) & =\delta_{+\alpha}{\rm Tr}\left(-\hat{\sigma}_{i}^{+}\hat{\rho}_{i}\right)+\delta_{-\alpha}{\rm Tr}\left(-\hat{\sigma}_{i}^{-}\hat{\rho}_{i}\right)+\delta_{z\alpha}{\rm Tr}\left(\hat{\sigma}_{i}^{z}\hat{\rho}_{i}\right)\\
+ & =\delta_{z\alpha}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{+\alpha}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{-\alpha}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \\
+{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{\eta}\hat{\rho}_{i}\right) & =\delta_{+\eta}\!\left(2\delta_{z\alpha}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)+\delta_{-\eta}\!\left(-2\delta_{z\alpha}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)+\delta_{z\eta}\!\left(\delta_{z\alpha}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{+\alpha}\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{-\alpha}\!\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)\\
+ & =2\delta_{+\eta}\delta_{z\alpha}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)-2\delta_{-\eta}\delta_{z\alpha}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)+\delta_{z\eta}\left(\delta_{z\alpha}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{+\alpha}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{-\alpha}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right),\\
+2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\hat{A}_{j}^{\dagger\eta}\right) & =2\gamma_{\eta}\left(\left(1-\delta_{ij}\right){\rm Tr}\left(\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}_{j}\right){\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\rho}_{i}\right)+\delta_{ij}{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{\eta}\hat{\rho}_{i}\right)\right)\\
+ & =2\gamma_{\eta}\delta_{ij}\!\left(2\delta_{+\eta}\delta_{z\alpha}\!\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\right)-2\delta_{-\eta}\delta_{z\alpha}\!\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\right)+\delta_{z\eta}\!\left(\delta_{z\alpha}\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{+\alpha}\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{-\alpha}\!\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\!\right)\\
+ & \,\,\,\,\,+2\gamma_{\eta}\left(1-\delta_{ij}\right)\left(2-\delta_{z\eta}+2\left(\delta_{+\eta}-\delta_{-\eta}\right)\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle \\
+2\gamma_{+}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{+}\hat{\rho}\hat{A}_{j}^{\dagger+}\right) & =2\gamma_{+}\left(\left(1-\delta_{ij}\right)\left(2+2\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +\delta_{ij}\left(2\delta_{z\alpha}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)\right)\\
+ & =4\gamma_{+}\left(\left(1-\delta_{ij}\right)\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +\delta_{ij}\delta_{z\alpha}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right),\\
+2\gamma_{-}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{-}\hat{\rho}\hat{A}_{j}^{\dagger-}\right) & =2\gamma_{-}\left(\left(1-\delta_{ij}\right)\left(2-2\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +\delta_{ij}\left(-2\delta_{z\alpha}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)\right)\\
+ & =4\gamma_{-}\left(\left(1-\delta_{ij}\right)\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle -\delta_{ij}\delta_{z\alpha}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right),\\
+2\gamma_{z}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{z}\hat{\rho}\hat{A}_{j}^{\dagger z}\right) & =2\gamma_{z}\left(\left(1-\delta_{ij}\right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +\delta_{ij}\left(\delta_{z\alpha}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{+\alpha}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{-\alpha}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)\right)\\
+\sum_{\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\hat{A}_{j}^{\dagger\eta}\right) & =4\gamma_{+}\left(\left(1-\delta_{ij}\right)\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +\delta_{ij}\delta_{z\alpha}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)+4\gamma_{-}\left(\left(1-\delta_{ij}\right)\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle \right.\\
+ & \,\,\,\,\,\left.-\delta_{ij}\delta_{z\alpha}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)+2\gamma_{z}\left(\left(1-\delta_{ij}\right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +\delta_{ij}\left(\delta_{z\alpha}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{+\alpha}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{-\alpha}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)\right),\\
+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]\right) & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{H}_{{\rm S}}\hat{\rho}-\hat{\sigma}_{i}^{\alpha}\hat{\rho}\hat{H}_{{\rm S}}\right)\\
+ & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{H}_{{\rm S}}\hat{\rho}\right)-{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\rho}\hat{H}_{{\rm S}}\right)\\
+ & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{H}_{{\rm S}}\hat{\rho}\right)-{\rm Tr}\left(\hat{H}_{{\rm S}}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)\\
+ & ={\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{H}_{{\rm S}}\right]\hat{\rho}\right)\\
+ & ={\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\sum_{j}\overrightarrow{h_{j}}\cdot\overrightarrow{\hat{\sigma}_{j}}+\sum_{jk\beta\varepsilon}A_{jk}\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)\\
+ & =\sum_{j}\overrightarrow{h_{j}}\cdot{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\overrightarrow{\hat{\sigma}_{j}}\right]\hat{\rho}\right)+\sum_{jk\beta\varepsilon}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)\\
+ & =\sum_{j\beta}h_{j\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\right]\hat{\rho}\right)+\sum_{jk\beta\varepsilon}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right),\\
+{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\right]\hat{\rho}\right) & =\delta_{ij}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\rho}\right)+\cancelto{0}{\left(1-\delta_{ij}\right){\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\right]\hat{\rho}\right)},\\
+ & =\delta_{ij}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\rho}\right),\\
+\sum_{j\beta}h_{j\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\right]\hat{\rho}\right) & =\sum_{\beta}h_{i\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\rho}\right),\beta\in\left\{ x,y,z\right\} .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ For the last part of this calculation given by 
+\begin_inset Formula $\sum_{jk\beta\varepsilon}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)$
+\end_inset
+
+ with 
+\begin_inset Formula $\beta,\varepsilon\in\left\{ x,y,z\right\} $
+\end_inset
+
+, we will be more detailed.
+ If 
+\begin_inset Formula $i\neq j,j\neq k,k\neq i$
+\end_inset
+
+ then by the factorizability hypothesis and the properties of the commutator
+ we deduce that 
+\begin_inset Formula ${\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)=0$
+\end_inset
+
+, so for now we do not require the truncation at third order.
+ Now if 
+\begin_inset Formula $i\neq j,j=k$
+\end_inset
+
+ then 
+\begin_inset Formula ${\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{j}^{\varepsilon}\right]\hat{\rho}\right)=0$
+\end_inset
+
+ by the factorization hyphotesis.
+ If 
+\begin_inset Formula $i\neq j,i=k$
+\end_inset
+
+ then 
+\begin_inset Formula ${\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\rho}\right)=\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\beta}\right\rangle $
+\end_inset
+
+ and if 
+\begin_inset Formula $i=j,j\neq k$
+\end_inset
+
+ then 
+\begin_inset Formula ${\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)=\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\right\rangle \left\langle \hat{\sigma}_{k}^{\varepsilon}\right\rangle $
+\end_inset
+
+, finally if 
+\begin_inset Formula $i=j=k$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\rho}\right) & ={\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\delta_{\beta\varepsilon}+{\rm i}\epsilon_{\beta\varepsilon\gamma}\hat{\sigma}_{i}^{\gamma}\right]\hat{\rho}\right)\\
+ & ={\rm i}\epsilon_{\beta\varepsilon\gamma}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\hat{\rho}\right)\\
+ & ={\rm i}\epsilon_{\beta\varepsilon\gamma}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ To have a suitable notation then we introduce our relevant sets where the
+ expected values can be non-zero:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+C_{1} & =\left\{ \left(i,j,k\right)\lvert i\neq j,i=k\right\} ,\\
+C_{2} & =\left\{ \left(i,j,k\right)\lvert i=j,j\neq k\right\} ,\\
+C_{3} & =\left\{ \left(i,j,k\right)\lvert i=j=k\right\} .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ With this machinary we can write the expected value of the interaction
+ hamiltonian as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\sum_{jk\beta\varepsilon}\!A_{jk}{\rm Tr}\left(\!\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\! & =\sum_{\beta\varepsilon}\sum_{jk}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)\\
+ & =\sum_{\beta\varepsilon}\!\left(\!\sum_{C_{1}}\!A_{jk}{\rm Tr}\!\left(\left[\hat{\sigma}_{i}^{\alpha}\!,\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\!+\!\sum_{C_{2}}\!A_{jk}{\rm Tr}\!\left(\left[\hat{\sigma}_{i}^{\alpha}\!,\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\!+\!\sum_{C_{3}}\!A_{jk}{\rm Tr}\!\left(\left[\hat{\sigma}_{i}^{\alpha}\!,\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\!\right)\\
+ & =\sum_{\beta\varepsilon}\left(\sum_{j\neq i}A_{ji}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\beta}\right\rangle +\sum_{k\neq i}A_{ik}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\right\rangle \left\langle \hat{\sigma}_{k}^{\varepsilon}\right\rangle +A_{ii}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\rho}\right)\right)\\
+ & =\sum_{\beta\varepsilon}\left(\sum_{j\neq i}A_{ji}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\beta}\right\rangle +\sum_{j\neq i}A_{ij}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\varepsilon}\right\rangle +A_{ii}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\rho}\right)\right)\\
+ & =\sum_{\beta\varepsilon}\left({\rm i}A_{ii}\epsilon_{\beta\varepsilon\gamma}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\right\rangle +\sum_{j\neq i}\left(A_{ji}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\beta}\right\rangle +A_{ij}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\varepsilon}\right\rangle \right)\right)\\
+ & ={\rm i}A_{ii}\sum_{\beta\varepsilon}\epsilon_{\beta\varepsilon\gamma}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\right\rangle +\sum_{j\neq i}\!\left(A_{ji}\sum_{\beta\varepsilon}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\beta}\right\rangle +A_{ij}\sum_{\beta\varepsilon}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\varepsilon}\right\rangle \right),\\
+\hat{\varUpsilon}_{i}\! & =\sum_{\varepsilon}\hat{\sigma}_{i}^{\varepsilon}\\
+ & =\begin{pmatrix}1 & 1-{\rm i}\\
+1+{\rm i} & -1
+\end{pmatrix}\\
+ & =\hat{\sigma}_{i}^{z}+\frac{1-{\rm i}}{2}\hat{\sigma}_{i}^{+}+\frac{1+{\rm i}}{2}\hat{\sigma}_{i}^{-},\\
+\left\langle \hat{\varUpsilon}_{i}\right\rangle \! & =\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle ,\\
+\sum_{\beta\varepsilon}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\beta}\right\rangle \! & =\left\langle \hat{\varUpsilon}_{j}\right\rangle \sum_{\varepsilon}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle ,\\
+\sum_{\varepsilon}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \! & =\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle +\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle +\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \\
+ & =\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\varUpsilon}_{i}\right]\right\rangle ,
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\sum_{\beta\varepsilon}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\right\rangle \left\langle \hat{\sigma}_{j}^{\beta}\right\rangle  & =\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\varUpsilon}_{i}\right]\right\rangle \left\langle \hat{\varUpsilon}_{j}\right\rangle ,\\
+\sum_{jk\beta\varepsilon}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right) & ={\rm i}A_{ii}\sum_{\beta\varepsilon}\epsilon_{\beta\varepsilon\gamma}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\right\rangle +\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\varUpsilon}_{i}\right]\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left\langle \hat{\varUpsilon}_{j}\right\rangle ,\\
+\sum_{\beta\varepsilon}\epsilon_{\beta\varepsilon\gamma} & =0,\\
+\sum_{jk\beta\varepsilon}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right) & =\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\varUpsilon}_{i}\right]\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left\langle \hat{\varUpsilon}_{j}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Summarizing we find that:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \hat{\sigma}_{i}^{\alpha}\left(t\right)\right\rangle  & =-\frac{{\rm i}}{\hbar}\left(\sum_{\beta}h_{i\beta}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\right\rangle +\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\varUpsilon}_{i}\right]\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left\langle \hat{\varUpsilon}_{j}\right\rangle \right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)\\
+ & \,\,\,\,\,\times\!\left(\delta_{z\alpha}-2\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle \!\left(\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!-\!\sum_{j}\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!\right)\!\right)\!+\!\sum_{j}\left(4\gamma_{+}\left(\left(1-\delta_{ij}\right)\!\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +\delta_{ij}\delta_{z\alpha}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\right)\!\right)+4\gamma_{-}\left(\left(1-\delta_{ij}\right)\right.\right.\\
+ & \,\,\,\,\,\left.\left.\times\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle -\delta_{ij}\delta_{z\alpha}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)+2\gamma_{z}\left(\left(1-\delta_{ij}\right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle +\delta_{ij}\left(\delta_{z\alpha}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{+\alpha}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{-\alpha}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)\right)\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ In particular we cannot assume symmetry due to the fact that the system
+ hamiltonian is not the same for all the particles, in this case we have
+ 
+\begin_inset Formula $2N$
+\end_inset
+
+ differential equations (or 
+\begin_inset Formula $3N$
+\end_inset
+
+ in case that we want to include the conjugate transpose part of 
+\begin_inset Formula $\sigma^{+}$
+\end_inset
+
+ which is 
+\begin_inset Formula $\sigma^{-}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{i}^{+}\!\left(t\right)\right\rangle \! & =-\frac{{\rm i}}{\hbar}\!\left(\!\!\sum_{\beta}h_{i\beta}\left\langle \!\left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{\beta}\right]\!\right\rangle +\left\langle \!\left[\hat{\sigma}_{i}^{+},\hat{\varUpsilon}_{i}\right]\!\right\rangle \!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\!\left\langle \hat{\varUpsilon}_{j}\right\rangle \!\!\right)\!-\!2N\!\left(\gamma_{z}\!+2\gamma_{+}\!+2\gamma_{-}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!-\!2\left(\gamma_{-}\!-\gamma_{+}\right)\\
+ & \,\,\,\,\,\times\left(\delta_{z+}-2\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\sum_{j}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)+\sum_{j}\,\left(4\gamma_{+}\left(\left(1-\delta_{ij}\right)\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\delta_{ij}\delta_{z+}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)\right.\\
+ & \,\,\,\,\,+4\gamma_{-}\!\left(1-\delta_{ij}\right)\!\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{ij}\delta_{z+}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\right)+2\gamma_{z}\!\left(\delta_{ij}\!\left(\delta_{z+}\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{++}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{-+}\delta_{-+}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)\right.\\
+ & \,\,\,\,\,\left.\left.+\left(1-\delta_{ij}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\right)\\
+ & =-\frac{{\rm i}}{\hbar}\left(\sum_{\beta}h_{i\beta}\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{\beta}\right]\right\rangle +\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\varUpsilon}_{i}\right]\right\rangle \!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\!\left\langle \hat{\varUpsilon}_{j}\right\rangle \right)\!-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle -2\left(\gamma_{-}\right.\\
+ & \,\,\,\,\,\left.-\gamma_{+}\right)\!\left(\!-2\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\left(\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\sum_{j}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!\right)\!\right)\!+\!\sum_{j}\!\left(4\gamma_{+}\left(1-\delta_{ij}\right)\!\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle +4\gamma_{-}\left(1-\delta_{ij}\right)\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right.\\
+ & \,\,\,\,\,\left.\times\left\langle \hat{\sigma}_{i}^{+}\right\rangle +2\gamma_{z}\left(\left(1-\delta_{ij}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\delta_{ij}\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\right),\\
+ & =-\frac{{\rm i}}{\hbar}\left(\sum_{\beta}h_{i\beta}\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{\beta}\right]\right\rangle +\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\varUpsilon}_{i}\right]\right\rangle \!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\!\left\langle \hat{\varUpsilon}_{j}\right\rangle \!\right)\!-2N\!\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle -4\left(\gamma_{-}\right.\\
+ & \,\,\,\,\,\left.-\gamma_{+}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(4\gamma_{+}\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+4\gamma_{-}\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+2\gamma_{z}\right)-2\gamma_{z}\left\langle \hat{\sigma}_{i}^{+}\right\rangle \\
+\left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{x}\right] & =\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}-\begin{pmatrix}0 & 1\\
+1 & 0
+\end{pmatrix}\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\\
+ & =\begin{pmatrix}2 & 0\\
+0 & 0
+\end{pmatrix}-\begin{pmatrix}0 & 0\\
+0 & 2
+\end{pmatrix}\\
+ & =2\hat{\sigma}_{i}^{z},
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+\left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{y}\right] & =\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\begin{pmatrix}0 & -{\rm i}\\
+{\rm i} & 0
+\end{pmatrix}-\begin{pmatrix}0 & -{\rm i}\\
+{\rm i} & 0
+\end{pmatrix}\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\\
+ & =\begin{pmatrix}2{\rm i} & 0\\
+0 & 0
+\end{pmatrix}-\begin{pmatrix}0 & 0\\
+0 & 2{\rm i}
+\end{pmatrix}\\
+ & =2{\rm i}\hat{\sigma}_{i}^{z},\\
+\left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{z}\right] & =\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\begin{pmatrix}1 & 0\\
+0 & -1
+\end{pmatrix}-\begin{pmatrix}1 & 0\\
+0 & -1
+\end{pmatrix}\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\\
+ & =\begin{pmatrix}0 & -2\\
+0 & 0
+\end{pmatrix}-\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\\
+ & =-2\hat{\sigma}_{i}^{+},\\
+\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\varUpsilon}_{i}\right]\right\rangle  & =\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{x}+\hat{\sigma}_{i}^{y}+\hat{\sigma}_{i}^{z}\right]\right\rangle \\
+ & =\left\langle \left[\hat{\sigma}_{i}^{+},2\hat{\sigma}_{i}^{z}+2{\rm i}\hat{\sigma}_{i}^{z}-2\hat{\sigma}_{i}^{+}\right]\right\rangle \\
+ & =2\left(1+{\rm i}\right)\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{z}\right]\right\rangle \\
+ & =-4\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle ,\\
+\sum_{\beta}h_{i\beta}\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{\beta}\right]\right\rangle  & =h_{ix}\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{x}\right]\right\rangle +h_{iy}\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{y}\right]\right\rangle +h_{iz}\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{z}\right]\right\rangle \\
+ & =h_{ix}\left\langle 2\hat{\sigma}_{i}^{z}\right\rangle +h_{iy}\left\langle 2{\rm i}\hat{\sigma}_{i}^{z}\right\rangle +h_{iz}\left\langle -2\hat{\sigma}_{i}^{+}\right\rangle \\
+ & =2\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right),\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle  & =-\frac{{\rm i}}{\hbar}\!\left(\!2\overrightarrow{h_{i}}\!\cdot\!\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-4\left(1+{\rm i}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{-}\right\rangle \!\right)\!\!\right)\\
+ & \,\,\,\,\,-2N\!\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!-4\left(\gamma_{-}-\gamma_{+}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\!\sum_{j\neq i}\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!+\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\!\sum_{j\neq i}\!\left(4\gamma_{+}\!\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!+4\gamma_{-}\!\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\right.\\
+ & \,\,\,\,\,\left.+2\gamma_{z}\right)-2\gamma_{z}\left\langle \hat{\sigma}_{i}^{+}\right\rangle \\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\!2\overrightarrow{h_{i}}\!\cdot\!\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-4\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{-}\right\rangle \!\right)\!\!\right)\\
+ & \,\,\,\,\,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\left(2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)+2\gamma_{z}\right)-4\left(\gamma_{-}-\gamma_{+}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\sum_{j\neq i}\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\sum_{j\neq i}\!\left(4\gamma_{+}\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+4\gamma_{-}\right.\\
+ & \,\,\,\,\,\left.\times\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+2\gamma_{z}\right)\\
+ & =-\frac{{\rm i}}{\hbar}\left(2\overrightarrow{h_{i}}\!\cdot\!\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-4\left(1+{\rm i}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{-}\right\rangle \!\right)\!\!\right)\\
+ & \,\,\,\,\,-\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\left(2N\!\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\!+\!2\gamma_{z}\right)+\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\sum_{j\neq i}\!\left(\!4\gamma_{+}\!\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!\right)+4\gamma_{-}\!\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!\right)+2\gamma_{z}\!-4\left(\gamma_{-}-\gamma_{+}\right)\!\right.\\
+ & \,\,\,\,\,\left.\times\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right),\\
+ & =-\frac{2{\rm i}}{\hbar}\left(\!\overrightarrow{h_{i}}\!\cdot\!\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1\!+{\rm i}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\!\left(2\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\left(1\!-{\rm i}\right)\!\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\left(1\!+{\rm i}\right)\!\left\langle \hat{\sigma}_{j}^{-}\right\rangle \!\right)\right)\\
+ & \,\,\,\,\,-\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\left(2N\!\left(\gamma_{z}\!+2\gamma_{+}+2\gamma_{-}\right)+2\gamma_{z}\right)+\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\!\sum_{j\neq i}\!\left(4\gamma_{+}\!\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+4\gamma_{-}\!\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle -4\left(\gamma_{-}-\gamma_{+}\right)\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\right.\\
+ & \,\,\,\,\,\left.+2\gamma_{z}\right),\\
+\overrightarrow{v} & =\left(1-{\rm i},1+{\rm i},2\right),\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle  & =-\frac{2{\rm i}}{\hbar}\left(\,\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\overrightarrow{v}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\,\right)-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \\
+ & \,\,\,\,\,\times\left(4N\left(\gamma_{+}+\gamma_{-}\right)+2\left(N+1\right)\gamma_{z}\right)+2\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(2\gamma_{+}\left(1+2\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+2\gamma_{-}\left(1-2\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+\gamma_{z}\right)\\
+ & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\overrightarrow{v}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+ & \,\,\,\,\,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(4N\left(\gamma_{+}+\gamma_{-}\right)+2\left(N+1\right)\gamma_{z}\right)+2\left\langle \hat{\sigma}_{i}^{+}\right\rangle \,\sum_{j\neq i}\,\left(2\gamma_{+}+2\gamma_{-}+\gamma_{z}\right)+2\left\langle \hat{\sigma}_{i}^{+}\right\rangle \,\sum_{j\neq i}\left(4\gamma_{+}\left\langle \hat{\sigma}_{j}^{z}\right\rangle -4\gamma_{-}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\\
+ & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\overrightarrow{v}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)+2\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(N-1\right)\\
+ & \,\,\,\,\,\times\left(2\gamma_{+}+2\gamma_{-}+\gamma_{z}\right)-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(4N\left(\gamma_{+}+\gamma_{-}\right)+2\left(N+1\right)\gamma_{z}\right)+2\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(4\gamma_{+}\left\langle \hat{\sigma}_{j}^{z}\right\rangle -4\gamma_{-}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\\
+ & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\overrightarrow{v}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)+8\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\times\left(\gamma_{+}-\gamma_{-}\right)+\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(2\left(N-1\right)\left(2\gamma_{+}+2\gamma_{-}+\gamma_{z}\right)-\left(4N\left(\gamma_{+}+\gamma_{-}\right)+2\left(N+1\right)\gamma_{z}\right)\right)\\
+ & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\overrightarrow{v}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)+8\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\times\left(\gamma_{+}-\gamma_{-}\right)+\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(4\left(N-1\right)\left(\gamma_{+}+\gamma_{-}\right)+2\left(N-1\right)\gamma_{z}-4N\left(\gamma_{+}+\gamma_{-}\right)-2\left(N+1\right)\gamma_{z}\right)\\
+ & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\overrightarrow{v}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)+8\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\times\left(\gamma_{+}-\gamma_{-}\right)+\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(-4\left(\gamma_{+}+\gamma_{-}\right)-4\gamma_{z}\right)\\
+ & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\overrightarrow{v}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)+8\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\times\left(\gamma_{+}-\gamma_{-}\right)-4\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Our first pair of equations are:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle  & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\!\cdot\!\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\overrightarrow{v}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)-4\left\langle \hat{\sigma}_{i}^{+}\right\rangle \\
+ & \,\,\,\,\,\times\left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)+8\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(\gamma_{+}-\gamma_{-}\right)\sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{-}\left(t\right)\right\rangle  & =\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}^{*}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)-\left(1-{\rm i}\right)\left\langle \hat{\sigma}_{i}^{-}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)^{*}\overrightarrow{v}^{*}\cdot\left(\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,-4\left\langle \hat{\sigma}_{i}^{-}\right\rangle \left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)^{*}+8\left\langle \hat{\sigma}_{i}^{-}\right\rangle \left(\gamma_{+}-\gamma_{-}\right)^{*}\sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}^{*}\cdot\left(-\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)+\left(1-{\rm i}\right)\left\langle \hat{\sigma}_{i}^{-}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)^{*}\overrightarrow{v}^{*}\cdot\left(\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,-4\left\langle \hat{\sigma}_{i}^{-}\right\rangle \left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)+8\left\langle \hat{\sigma}_{i}^{-}\right\rangle \left(\gamma_{+}-\gamma_{-}\right)\sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ The latter was found using 
+\begin_inset Formula $\left(\hat{\sigma}_{i}^{+}\left(t\right)\right)^{\dagger}=\hat{\sigma}_{i}^{-}\left(t\right)$
+\end_inset
+
+.
+ The equation for 
+\begin_inset Formula $\partial_{t}\left\langle \hat{\sigma}_{i}^{z}\left(t\right)\right\rangle $
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \hat{\sigma}_{i}^{z}\left(t\right)\right\rangle \! & =-\frac{{\rm i}}{\hbar}\!\left(\!\sum_{\beta}h_{i\beta}\left\langle \!\left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{\beta}\right]\!\right\rangle +\left\langle \!\left[\hat{\sigma}_{i}^{z},\hat{\varUpsilon}_{i}\right]\!\right\rangle \!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\!\left\langle \!\hat{\varUpsilon}_{j}\!\right\rangle \!\right)\!-2N\!\left(\gamma_{z}\!+2\gamma_{+}+2\gamma_{-}\right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)\\
+\! & \,\,\,\,\,\times\left(\delta_{zz}-2\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\sum_{j}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\right)+\sum_{j}\left(4\gamma_{+}\left(\left(1-\delta_{ij}\right)\!\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\delta_{ij}\delta_{zz}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\!\right)+4\gamma_{-}\!\right.\\
+\! & \,\,\,\,\,\left.\times\!\left(\!\left(1\!-\delta_{ij}\right)\!\left(1\!-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!\right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{ij}\delta_{zz}\left(1\!+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\right)\!\right)\!+2\gamma_{z}\left(\!\left(1\!-\delta_{ij}\!\right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\delta_{ij}\!\left(\delta_{zz}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!-\delta_{+z}\left\langle \!\hat{\sigma}_{i}^{+}\!\right\rangle \!-\delta_{-z}\left\langle \!\hat{\sigma}_{i}^{-}\!\right\rangle \!\right)\!\right)\!\right)\\
+\! & =-\frac{{\rm i}}{\hbar}\left(\!\sum_{\beta}h_{i\beta}\left\langle \!\left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{\beta}\right]\!\right\rangle +\left\langle \!\left[\hat{\sigma}_{i}^{z},\hat{\varUpsilon}_{i}\right]\!\right\rangle \!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\left\langle \!\hat{\varUpsilon}_{j}\!\right\rangle \!\right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!-2\left(\gamma_{-}-\gamma_{+}\right)\\
+\! & \,\,\,\,\,\times\!\left(\!1\!-2\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\left(\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\!\sum_{j}\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!\right)\!\right)\!+\!\sum_{j}\!\left(4\gamma_{+}\left(\left(1\!-\delta_{ij}\right)\!\left(1\!+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!+\delta_{ij}\left(1\!-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)+4\gamma_{-}\left(\left(1-\delta_{ij}\right)\!\right.\!\right.\\
+\! & \,\,\,\,\,\left.\left.\times\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{ij}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)+2\gamma_{z}\left(\left(1-\delta_{ij}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\delta_{ij}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right),\\
+\sum_{\beta}h_{i\beta}\!\left\langle \!\left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{\beta}\right]\!\right\rangle \! & =h_{ix}\left\langle \left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{x}\right]\right\rangle +h_{iy}\left\langle \left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{y}\right]\right\rangle +h_{iz}\left\langle \left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{z}\right]\right\rangle \\
+\! & =h_{ix}\left\langle {\rm i}\hat{\sigma}_{i}^{y}\right\rangle +h_{iy}\left\langle -{\rm i}\hat{\sigma}_{i}^{x}\right\rangle +h_{iz}\cdot0\\
+\! & ={\rm i}\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{y}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{x}\right\rangle ,0\right),\\
+\hat{\sigma}_{i}^{x}\! & =\frac{\hat{\sigma}_{i}^{+}+\hat{\sigma}_{i}^{-}}{2},\\
+\hat{\sigma}_{i}^{y}\! & ={\rm i}\frac{\hat{\sigma}_{i}^{-}-\hat{\sigma}_{i}^{+}}{2},\\
+\sum_{\beta}h_{i\beta}\!\left\langle \!\left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{\beta}\right]\!\right\rangle \! & ={\rm i}\overrightarrow{h_{i}}\cdot\left(\left\langle {\rm i}\frac{\hat{\sigma}_{i}^{-}-\hat{\sigma}_{i}^{+}}{2}\right\rangle ,-\left\langle \frac{\hat{\sigma}_{i}^{+}+\hat{\sigma}_{i}^{-}}{2}\right\rangle ,0\right)\\
+\! & =\overrightarrow{h_{i}}\cdot\left(\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\right),\\
+\left\langle \left[\hat{\sigma}_{i}^{z},\hat{\varUpsilon}_{i}\right]\right\rangle \! & =\left\langle \left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{x}+\hat{\sigma}_{i}^{y}+\hat{\sigma}_{i}^{z}\right]\right\rangle \\
+\! & =\left\langle \left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{x}\right]+\left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{y}\right]+\left[\hat{\sigma}_{i}^{z},\hat{\sigma}_{i}^{z}\right]\right\rangle \\
+\! & =\left\langle {\rm i}\hat{\sigma}_{i}^{y}-{\rm i}\hat{\sigma}_{i}^{x}\right\rangle \\
+\! & ={\rm i}\left\langle \hat{\sigma}_{i}^{y}-\hat{\sigma}_{i}^{x}\right\rangle \\
+\! & ={\rm i}\left\langle {\rm i}\frac{\hat{\sigma}_{i}^{-}-\hat{\sigma}_{i}^{+}}{2}-\frac{\hat{\sigma}_{i}^{+}+\hat{\sigma}_{i}^{-}}{2}\right\rangle \\
+\! & =\left\langle -\frac{\hat{\sigma}_{i}^{-}-\hat{\sigma}_{i}^{+}}{2}-{\rm i}\frac{\hat{\sigma}_{i}^{+}+\hat{\sigma}_{i}^{-}}{2}\right\rangle \\
+\! & =-\frac{1}{2}\left(\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{-}\right\rangle -\left(1-{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\\
+\! & =\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{z}\left(t\right)\right\rangle \! & =-\frac{{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\right)+\left(\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left(\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right.\right.\\
+ & \,\,\,\,\,\left.\left.+\,\frac{1-{\rm i}}{2}\,\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\,\frac{1+{\rm i}}{2}\,\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)-2N\left(\,\gamma_{z}+2\gamma_{+}+2\gamma_{-}\,\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\,\gamma_{-}-\gamma_{+}\,\right)\left(1+2\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\\
+ & \,\,\,\,\,+\sum_{j}\!\left(4\gamma_{+}\left(\!\left(1-\delta_{ij}\right)\!\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\delta_{ij}\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\!\right)+4\gamma_{-}\left(\!\left(1-\delta_{ij}\right)\!\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!\right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle -\delta_{ij}\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\right)\right)\!\right.\\
+ & \,\,\,\,\,\left.+2\gamma_{z}\left(\left(1-\delta_{ij}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\delta_{ij}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)\\
+ & =-\frac{{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\right)+\left(\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left(\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right.\right.\\
+ & \,\,\,\,\,\left.\left.+\,\frac{1-{\rm i}}{2}\,\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\,\frac{1+{\rm i}}{2}\,\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)-2N\left(\,\gamma_{z}+2\gamma_{+}+2\gamma_{-}\,\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\,\gamma_{-}-\gamma_{+}\,\right)\left(1+2\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+ & \,\,\,\,\,+\!\sum_{j}\delta_{ij}\left(4\gamma_{+}\!\left(1\!-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\!-4\gamma_{-}\left(1\!+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\!+2\gamma_{z}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\!+\!\sum_{j}\!\left(1\!-\delta_{ij}\right)\!\left(4\gamma_{+}\left(1\!+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle +4\gamma_{-}\left(1\!-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle +2\gamma_{z}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\right)\\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.\\
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)\!-2N\!\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)\!\left(\!1+2\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\sum_{j\neq i}\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle \!\right)\!+\!\left(4\gamma_{+}\!\left(1-\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)-4\gamma_{-}\!\left(1+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\!+\!2\gamma_{z}\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\\
+ & \,\,\,\,\,+\sum_{j\neq i}\left(4\gamma_{+}\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle +4\gamma_{-}\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle +2\gamma_{z}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.\\
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)-4\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +4\gamma_{+}-4\gamma_{+}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -4\gamma_{-}-4\gamma_{-}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \\
+ & \,\,\,\,\,+2\gamma_{z}\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left(4\gamma_{+}\left(1+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+4\gamma_{-}\left(1-\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)+2\gamma_{z}\right)\\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.\\
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)-4\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +4\gamma_{+}-4\gamma_{+}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -4\gamma_{-}-4\gamma_{-}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \\
+ & \,\,\,\,\,+2\gamma_{z}\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left(4\gamma_{+}+4\gamma_{+}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +4\gamma_{-}-4\gamma_{-}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +2\gamma_{z}\right)\\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.\\
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)-4\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +4\gamma_{+}-4\gamma_{+}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -4\gamma_{-}-4\gamma_{-}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \\
+ & \,\,\,\,\,+2\gamma_{z}\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left(4\gamma_{+}+4\gamma_{-}+2\gamma_{z}\right)+4\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left(\gamma_{+}-\gamma_{-}\right)\sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.\\
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)-4\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +4\gamma_{+}-4\gamma_{+}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -4\gamma_{-}-4\gamma_{-}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \\
+ & \,\,\,\,\,+2\gamma_{z}\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left(N-1\right)\left(4\gamma_{+}+4\gamma_{-}+2\gamma_{z}\right)+4\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left(\gamma_{+}-\gamma_{-}\right)\sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.\\
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)-8\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +4\gamma_{+}-4\gamma_{+}\left\langle \hat{\sigma}_{i}^{z}\right\rangle -4\gamma_{-}-4\gamma_{-}\left\langle \hat{\sigma}_{i}^{z}\right\rangle \\
+ & \,\,\,\,\,+2\gamma_{z}\left\langle \hat{\sigma}_{i}^{z}\right\rangle +\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left(N-1\right)\left(4\gamma_{+}+4\gamma_{-}+2\gamma_{z}\right)\\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.\\
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)\!+\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle \!\left(-2N\!\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)-4\gamma_{+}-4\gamma_{-}+2\gamma_{z}+\left(N-1\right)\!\left(4\gamma_{+}+4\gamma_{-}+2\gamma_{z}\right)\right)\!-\!2\left(\gamma_{-}-\gamma_{+}\right)\!-\!8\left(\gamma_{-}-\gamma_{+}\right)\\
+ & \,\,\,\,\,\times\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +4\gamma_{+}-4\gamma_{-}\\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)+\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left(-4\gamma_{+}-4\gamma_{-}+2\gamma_{z}-\left(4\gamma_{+}+4\gamma_{-}+2\gamma_{z}\right)\right)-8\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +6\left(\gamma_{+}-\gamma_{-}\right)\\
+ & =-\frac{{\rm i}}{\hbar}\!\left(\overrightarrow{h_{i}}\!\cdot\!\left(\!\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\!\right)\!+\left(\!\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \!\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left(\!\left\langle \hat{\sigma}_{j}^{z}\right\rangle +\frac{1\!-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1\!+{\rm i}}{2}\right.\!\right.\\
+ & \,\,\,\,\,\left.\left.\times\left\langle \hat{\sigma}_{j}^{-}\right\rangle \right)\right)-8\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left(\gamma_{+}+\gamma_{-}\right)+8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +6\left(\gamma_{+}-\gamma_{-}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Summarizing, our mean-field equations are given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\overrightarrow{v}_{+} & =\left(1-{\rm i},1+{\rm i},2\right),\label{eq:meanfield1}\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{+}\right\rangle  & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \overrightarrow{v}_{+}\cdot\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)-4\left\langle \hat{\sigma}_{i}^{+}\right\rangle \\
+ & \,\,\,\,\,\times\left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)+8\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(\gamma_{+}-\gamma_{-}\right)\sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{-}\right\rangle  & =-\frac{2{\rm i}}{\hbar}\left(\!\overrightarrow{h_{i}}^{*}\!\cdot\!\left(-\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)+\left(1-{\rm i}\right)\!\left\langle \hat{\sigma}_{i}^{-}\right\rangle \overrightarrow{v}_{+}^{*}\cdot\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)^{*}\!\left(\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\!\right)-4\left\langle \hat{\sigma}_{i}^{-}\right\rangle \\
+ & \,\,\,\,\,\times\left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)+8\left\langle \hat{\sigma}_{i}^{-}\right\rangle \left(\gamma_{+}-\gamma_{-}\right)\sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle ,\\
+\overrightarrow{v}_{z} & =\left(\frac{1-{\rm i}}{2},\frac{1+{\rm i}}{2},1\right),\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{z}\right\rangle  & =-\frac{{\rm i}}{\hbar}\,\left(\overrightarrow{h_{i}}\cdot\left(\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},-{\rm i}\frac{\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{-}\right\rangle }{2},0\right)+\left(\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{-}\right\rangle \right)\overrightarrow{v}_{z}\cdot\,\sum_{j\neq i}\,\left(A_{ji}+A_{ij}\right)\right.\\
+ & \,\,\,\,\,\left.\times\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)-8\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left(\gamma_{+}+\gamma_{-}\right)+8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +6\left(\gamma_{+}-\gamma_{-}\right).\label{eq:meanfiel2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Extending to the conjugate 
+\begin_inset Formula $\left\langle \hat{\sigma}_{j}^{+}\right\rangle ^{*}=\left\langle \hat{\sigma}_{i}^{-}\right\rangle $
+\end_inset
+
+ and reducing to real and imaginary parts we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left\langle \hat{\sigma}_{i}^{+}\right\rangle ^{*} & =2{\rm i}{\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\\
+\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left\langle \hat{\sigma}_{i}^{+}\right\rangle ^{*} & =2{\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\\
+\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle ^{*} & =\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left(\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)^{*}\\
+ & ={\rm i}{\rm Im}\left(\left(1-{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\\
+ & ={\rm i}\left({\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-{\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\right),\\
+\overrightarrow{v}_{+}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{+}\right\rangle ^{*},\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right) & =\left(1-{\rm i}\right)\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{j}^{+}\right\rangle ^{*}+2\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & =2\left({\rm Re}\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right),\\
+\overrightarrow{v}_{z}\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{+}\right\rangle ^{*},\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right) & =\left(\frac{1-{\rm i}}{2},\frac{1+{\rm i}}{2},1\right)\cdot\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{j}^{+}\right\rangle ^{*},\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\\
+ & =\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle +\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{j}^{+}\right\rangle ^{*}+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \\
+ & ={\rm Re}\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{j}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ In this scheme we arrive to a 
+\begin_inset Formula $2N$
+\end_inset
+
+ system of differential equations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \hat{\sigma}_{i}^{+}\right\rangle  & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{i}}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-2\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left({\rm Re}\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,\,-4\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)+8\left\langle \hat{\sigma}_{i}^{+}\right\rangle \left(\gamma_{+}-\gamma_{-}\right)\sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{z}\right\rangle  & =\frac{1}{\hbar}\!\left(\!\overrightarrow{h_{i}}\!\cdot\!\left({\rm Im}\!\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right),-{\rm Re}\!\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right),0\right)\!+\left({\rm Im}\!\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\!-{\rm Re}\!\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\right)\!\sum_{j\neq i}\!\left(A_{ji}+A_{ij}\right)\!\!\left({\rm Re}\!\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle \right)\!+{\rm Im}\!\left(\left\langle \hat{\sigma}_{j}^{+}\right\rangle \right)\right.\right.\\
+ & \,\,\,\,\,\left.\left.+\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)-8\left\langle \hat{\sigma}_{i}^{z}\right\rangle \left(\gamma_{+}+\gamma_{-}\right)+8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \sum_{j\neq i}\left\langle \hat{\sigma}_{j}^{z}\right\rangle +6\left(\gamma_{+}-\gamma_{-}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cumulant Expansion
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ We will extend our analysis to include the evolution of quantum correlations
+ of second order, in particular we consider the quantum evolution equation
+ of the form:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{\beta}\right\rangle  & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{\beta}\partial_{t}\hat{\rho}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Additionally, we truncate at 3rd order such that the following approximation
+ is plausible by the cumulant expansion:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left\langle \hat{\sigma}_{a}^{\alpha}\hat{\sigma}_{b}^{\beta}\hat{\sigma}_{c}^{\gamma}\right\rangle  & \approx\left\langle \hat{\sigma}_{a}^{\alpha}\right\rangle \left\langle \hat{\sigma}_{b}^{\beta}\hat{\sigma}_{c}^{\gamma}\right\rangle +\left\langle \hat{\sigma}_{b}^{\beta}\right\rangle \left\langle \hat{\sigma}_{c}^{\gamma}\hat{\sigma}_{a}^{\alpha}\right\rangle +\left\langle \hat{\sigma}_{c}^{\gamma}\right\rangle \left\langle \hat{\sigma}_{a}^{\alpha}\hat{\sigma}_{b}^{\beta}\right\rangle -2\left\langle \hat{\sigma}_{a}^{\alpha}\right\rangle \left\langle \hat{\sigma}_{b}^{\beta}\right\rangle \left\langle \hat{\sigma}_{c}^{\gamma}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+in the case where 
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ are distinct.
+ With this in mind we will get the set of equations needed, at first for
+ one-operator:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\partial_{t}\hat{\rho}\right) & ={\rm Tr}\left(\!\hat{\sigma}_{i}^{\alpha}\!\left(\!-\frac{{\rm i}}{\hbar}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\hat{\rho}-2\left(\gamma_{-}\!-\gamma_{+}\right)\sum_{i}\left\{ \hat{\rho},\hat{\sigma}_{i}^{z}\right\} +\sum_{i,\eta}2\gamma_{\eta}\hat{A}_{i}^{\eta}\hat{\rho}\hat{A}_{i}^{\dagger\eta}\!\right)\!\right)\\
+ & =-\frac{{\rm i}}{\hbar}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]\right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle -2\left(\gamma_{-}-\gamma_{+}\right)\sum_{j}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left\{ \hat{\rho},\hat{\sigma}_{j}^{z}\right\} \right)\\
+ & \,\,\,\,\,+\sum_{j,\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\hat{A}_{j}^{\dagger\eta}\right),\\
+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left\{ \hat{\rho},\hat{\sigma}_{j}^{z}\right\} \right) & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\rho}\hat{\sigma}_{j}^{z}+\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\hat{\rho}\right)\\
+ & ={\rm Tr}\left(\hat{\sigma}_{j}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\hat{\rho}\right)\\
+ & =\delta_{ij}\left({\rm Tr}\left(\hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{i}^{z}\hat{\rho}\right)\right)+\left(1-\delta_{ij}\right)\left({\rm Tr}\left(\hat{\sigma}_{j}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\hat{\rho}\right)\right),\\
+\sum_{j}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left\{ \hat{\rho},\hat{\sigma}_{j}^{z}\right\} \right) & =\left({\rm Tr}\left(\hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{i}^{z}\hat{\rho}\right)\right)+\sum_{j\neq i}\left({\rm Tr}\left(\hat{\sigma}_{j}^{z}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\hat{\rho}\right)\right)\\
+ & =\left\langle \hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{i}^{z}\right\rangle +\left\langle \hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{\alpha}\right\rangle +2\sum_{j\neq i}\left\langle \hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\right\rangle ,\\
+2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\hat{A}_{j}^{\dagger\eta}\right) & =2\gamma_{\eta}\left(\delta_{ij}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{\eta}\hat{\rho}\hat{A}_{i}^{\dagger\eta}\right)+\left(1-\delta_{ij}\right){\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\hat{A}_{j}^{\dagger\eta}\right)\right)\\
+ & =2\gamma_{\eta}\left(\delta_{ij}{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{\eta}\hat{\rho}\right)+\left(1-\delta_{ij}\right){\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}\right)\right),\\
+\sum_{j,\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\eta}\hat{\rho}\hat{A}_{j}^{\dagger\eta}\right) & =\sum_{\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{\eta}\hat{\rho}\right)+\sum_{j\neq i,\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}\right),\\
+{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\left[\hat{H}_{{\rm S}},\hat{\rho}\right]\right) & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{H}_{{\rm S}}\hat{\rho}-\hat{\sigma}_{i}^{\alpha}\hat{\rho}\hat{H}_{{\rm S}}\right)
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+ & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{H}_{{\rm S}}\hat{\rho}\right)-{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{\rho}\hat{H}_{{\rm S}}\right)\\
+ & ={\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{H}_{{\rm S}}\hat{\rho}\right)-{\rm Tr}\left(\hat{H}_{{\rm S}}\hat{\sigma}_{i}^{\alpha}\hat{\rho}\right)\\
+ & ={\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{H}_{{\rm S}}\right]\hat{\rho}\right)\\
+ & ={\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\sum_{j}\overrightarrow{h_{j}}\cdot\overrightarrow{\hat{\sigma}_{j}}+\sum_{jk\beta\varepsilon}A_{jk}\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)\\
+ & =\sum_{j}\overrightarrow{h_{j}}\cdot{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\overrightarrow{\hat{\sigma}_{j}}\right]\hat{\rho}\right)+\sum_{jk\beta\varepsilon}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)\\
+ & =\sum_{j\beta}h_{j\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\right]\hat{\rho}\right)+\sum_{jk\beta\varepsilon}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right),\\
+h_{j\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\right]\hat{\rho}\right) & =\delta_{ij}h_{i\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\rho}\right)+\left(1-\delta_{ij}\right)h_{j\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\right]\hat{\rho}\right)\\
+ & =\delta_{ij}h_{i\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\rho}\right),\\
+\sum_{j\beta}\overrightarrow{h_{j}}\cdot{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\overrightarrow{\hat{\sigma}_{j}}\right]\hat{\rho}\right) & =\sum_{j\beta}\delta_{ij}h_{i\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\rho}\right)\\
+ & =\sum_{\beta}h_{i\beta}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\rho}\right)\\
+ & =\overrightarrow{h}_{i}\cdot{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\left(\hat{\sigma}_{i}^{x},\hat{\sigma}_{i}^{y},\hat{\sigma}_{i}^{z}\right)\right]\hat{\rho}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Again we come back to the term 
+\begin_inset Formula $\sum_{jk\beta\varepsilon}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)$
+\end_inset
+
+ with 
+\begin_inset Formula $\beta,\varepsilon\in\left\{ x,y,z\right\} $
+\end_inset
+
+.
+ If 
+\begin_inset Formula $i\neq j,j\neq k,k\neq i$
+\end_inset
+
+ then 
+\begin_inset Formula $\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]=0$
+\end_inset
+
+ so 
+\begin_inset Formula ${\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)=0$
+\end_inset
+
+.
+ Now if 
+\begin_inset Formula $i\neq j,j=k$
+\end_inset
+
+ then 
+\begin_inset Formula ${\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{j}^{\varepsilon}\right]\hat{\rho}\right)=0$
+\end_inset
+
+ because 
+\begin_inset Formula $\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{j}^{\varepsilon}\right]=0$
+\end_inset
+
+ due to the fact that the operators belong to different Hilbert spaces.
+ If 
+\begin_inset Formula $i\neq j,i=k$
+\end_inset
+
+ then 
+\begin_inset Formula ${\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\rho}\right)={\rm Tr}\left(\left(\hat{\sigma}_{j}^{\beta}\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]+\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\right]\hat{\sigma}_{i}^{\varepsilon}\right)\hat{\rho}\right)={\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\sigma}_{j}^{\beta}\hat{\rho}\right)=\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\sigma}_{j}^{\beta}\right\rangle $
+\end_inset
+
+ and if 
+\begin_inset Formula $i=j,j\neq k$
+\end_inset
+
+ then 
+\begin_inset Formula ${\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)={\rm Tr}\left(\left(\hat{\sigma}_{i}^{\beta}\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{k}^{\varepsilon}\right]+\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\sigma}_{k}^{\varepsilon}\right)\hat{\rho}\right)={\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\sigma}_{k}^{\varepsilon}\hat{\rho}\right)=\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\sigma}_{k}^{\varepsilon}\right\rangle $
+\end_inset
+
+, finally if 
+\begin_inset Formula $i=j=k$
+\end_inset
+
+ then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\rho}\right) & ={\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\delta_{\beta\varepsilon}+{\rm i}\epsilon_{\beta\varepsilon\gamma}\hat{\sigma}_{i}^{\gamma}\right]\hat{\rho}\right)\\
+ & ={\rm i}\epsilon_{\beta\varepsilon\gamma}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\hat{\rho}\right)\\
+ & ={\rm i}\epsilon_{\beta\varepsilon\gamma}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Summarizing we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\sum_{jk\beta\varepsilon}\!A_{jk}{\rm Tr}\left(\!\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\! & =\sum_{\beta\varepsilon}\sum_{jk}A_{jk}{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\hat{\rho}\right)\\
+ & =\sum_{\beta\varepsilon}\!\left(\!\sum_{C_{1}}\!A_{jk}{\rm Tr}\!\left(\left[\hat{\sigma}_{i}^{\alpha}\!,\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\!+\!\sum_{C_{2}}\!A_{jk}{\rm Tr}\!\left(\left[\hat{\sigma}_{i}^{\alpha}\!,\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\!+\!\sum_{C_{3}}\!A_{jk}{\rm Tr}\!\left(\left[\hat{\sigma}_{i}^{\alpha}\!,\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\!\right)\\
+ & =\sum_{\beta\varepsilon}\left(\sum_{j\neq i}A_{ji}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\sigma}_{j}^{\beta}\right\rangle +\sum_{k\neq i}A_{ik}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\sigma}_{k}^{\varepsilon}\right\rangle +A_{ii}{\rm i}\epsilon_{\beta\varepsilon\gamma}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\right\rangle \right)\\
+ & =\sum_{\beta\varepsilon}\left(\sum_{j\neq i}A_{ji}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\varepsilon}\right]\hat{\sigma}_{j}^{\beta}\right\rangle +\sum_{j\neq i}A_{ij}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\sigma}_{j}^{\varepsilon}\right\rangle +A_{ii}{\rm i}\epsilon_{\beta\varepsilon\gamma}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\gamma}\right]\right\rangle \right)\\
+ & =\sum_{\beta\varepsilon}\sum_{j\neq i}\left(A_{ji}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\sigma}_{j}^{\varepsilon}\right\rangle +A_{ij}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\sigma}_{j}^{\varepsilon}\right\rangle \right)
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+ & =\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\sum_{\beta\varepsilon}\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{\beta}\right]\hat{\sigma}_{j}^{\varepsilon}\right\rangle ,\\
+\hat{\varUpsilon}_{i} & =\sum_{\varepsilon}\hat{\sigma}_{i}^{\varepsilon},\\
+\sum_{jk\beta\varepsilon}\!A_{jk}{\rm Tr}\left(\!\left[\hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{j}^{\beta}\hat{\sigma}_{k}^{\varepsilon}\right]\!\hat{\rho}\right)\! & =\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\varUpsilon}_{i}\right]\hat{\varUpsilon}_{j}\right\rangle ,
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Joining the set of expressions obtained previously we find that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \hat{\sigma}_{i}^{\alpha}\left(t\right)\right\rangle  & =-\frac{{\rm i}}{\hbar}\left(\overrightarrow{h}_{i}\cdot{\rm Tr}\left(\left[\hat{\sigma}_{i}^{\alpha},\left(\hat{\sigma}_{i}^{x},\hat{\sigma}_{i}^{y},\hat{\sigma}_{i}^{z}\right)\right]\hat{\rho}\right)+\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left\langle \left[\hat{\sigma}_{i}^{\alpha},\hat{\varUpsilon}_{i}\right]\hat{\varUpsilon}_{j}\right\rangle \right)-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{\alpha}\right\rangle \\
+ & \,\,\,\,\,\,-2\left(\gamma_{-}-\gamma_{+}\right)\left(\!\left\langle \left\{ \hat{\sigma}_{i}^{\alpha},\hat{\sigma}_{i}^{z}\right\} \right\rangle +2\sum_{j\neq i}\left\langle \hat{\sigma}_{i}^{\alpha}\hat{\sigma}_{j}^{z}\right\rangle \!\right)+\!\sum_{\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{\alpha}\hat{A}_{i}^{\eta}\hat{\rho}\right)+\!\sum_{j\neq i,\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{\alpha}\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ Explicitly we can find the equations associated with 
+\begin_inset Formula $\partial_{t}\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle $
+\end_inset
+
+ and 
+\begin_inset Formula $\partial_{t}\left\langle \hat{\sigma}_{i}^{z}\left(t\right)\right\rangle $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle \! & =-\frac{{\rm i}}{\hbar}\!\left(\!\overrightarrow{h}_{i}\!\cdot\!{\rm Tr}\left(\left[\hat{\sigma}_{i}^{+},\left(\hat{\sigma}_{i}^{x},\hat{\sigma}_{i}^{y},\hat{\sigma}_{i}^{z}\right)\right]\hat{\rho}\right)+\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\left\langle \left[\hat{\sigma}_{i}^{+},\hat{\varUpsilon}_{i}\right]\hat{\varUpsilon}_{j}\right\rangle \!\right)\!-2N\!\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle \\
+\! & \,\,\,\,\,\,-2\left(\gamma_{-}-\gamma_{+}\right)\!\left(\!\left\langle \left\{ \hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{z}\right\} \right\rangle +2\sum_{j\neq i}\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \!\right)\!+\!\sum_{\eta}2\gamma_{\eta}{\rm Tr}\!\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{+}\hat{A}_{i}^{\eta}\hat{\rho}\right)\!+\!\sum_{j\neq i,\eta}\!2\gamma_{\eta}{\rm Tr}\!\left(\hat{\sigma}_{i}^{+}\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}\right),\\
+\! & =-\frac{{\rm i}}{\hbar}\left(\!2\overrightarrow{h}_{i}\!\cdot\!\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\!-4\left(1+{\rm i}\right)\!\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left\langle \hat{\sigma}_{i}^{+}\hat{\varUpsilon}_{j}\right\rangle \!\right)\!-2N\!\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \\
+\! & \,\,\,\,\,\,-2\left(\gamma_{-}-\gamma_{+}\right)\!\left(\!\left\langle \left\{ \hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{z}\right\} \right\rangle +2\sum_{j\neq i}\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \!\right)\!+\!\sum_{\eta}2\gamma_{\eta}{\rm Tr}\!\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{+}\hat{A}_{i}^{\eta}\hat{\rho}\right)\!+\!\sum_{j\neq i,\eta}\!2\gamma_{\eta}{\rm Tr}\!\left(\hat{\sigma}_{i}^{+}\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}\right),\\
+\left\langle \left\{ \hat{\sigma}_{i}^{+},\hat{\sigma}_{i}^{z}\right\} \right\rangle \! & =\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\begin{pmatrix}1 & 0\\
+0 & -1
+\end{pmatrix}+\begin{pmatrix}1 & 0\\
+0 & -1
+\end{pmatrix}\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\\
+\! & =\begin{pmatrix}0 & -2\\
+0 & 0
+\end{pmatrix}+\begin{pmatrix}0 & 2\\
+0 & 0
+\end{pmatrix}\\
+\! & =\begin{pmatrix}0 & 0\\
+0 & 0
+\end{pmatrix},\\
+\partial_{t}\!\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle \! & =-\frac{{\rm i}}{\hbar}\left(\!2\overrightarrow{h}_{i}\!\cdot\!\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\!-4\left(1+{\rm i}\right)\!\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\!\left\langle \hat{\sigma}_{i}^{+}\hat{\varUpsilon}_{j}\right\rangle \!\right)\!-2N\!\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\!\left\langle \hat{\sigma}_{i}^{+}\right\rangle \\
+\! & \,\,\,\,\,\,-4\left(\gamma_{-}-\gamma_{+}\right)\sum_{j\neq i}\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \!+\!\sum_{\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{+}\hat{A}_{i}^{\eta}\hat{\rho}\right)+\!\sum_{j\neq i,\eta}2\gamma_{\eta}{\rm Tr}\left(\hat{\sigma}_{i}^{+}\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}\right),\\
+\left\langle \hat{\sigma}_{i}^{+}\hat{\varUpsilon}_{j}\right\rangle \! & =\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle +\frac{1-{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{+}\right\rangle +\frac{1+{\rm i}}{2}\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{-}\right\rangle ,
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\overrightarrow{v}_{1}\! & =\left(\frac{1-{\rm i}}{2},\frac{1+{\rm i}}{2},1\right),\\
+\left\langle \hat{\sigma}_{i}^{+}\hat{\varUpsilon}_{j}\right\rangle \! & =\overrightarrow{v}_{1}\cdot\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right),\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle \! & =-\frac{{\rm i}}{\hbar}\left(2\overrightarrow{h}_{i}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-4\left(1+{\rm i}\right)\sum_{j\neq i}\left(A_{ji}+A_{ij}\right)\overrightarrow{v}_{1}\cdot\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{+}\right\rangle ,\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{-}\right\rangle ,\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right)\right)\\
+\! & \,\,\,\,\,\,-2N\left(\gamma_{z}+2\gamma_{+}+2\gamma_{-}\right)\,\left\langle \hat{\sigma}_{i}^{+}\right\rangle -4\left(\gamma_{-}-\gamma_{+}\right)\sum_{j\neq i}\,\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle +\sum_{\eta}\,2\,\gamma_{\eta}\,{\rm Tr}\left(\hat{A}_{i}^{\dagger\eta}\hat{\sigma}_{i}^{+}\hat{A}_{i}^{\eta}\hat{\rho}\right)+\sum_{j\neq i,\eta}\,2\,\gamma_{\eta}\\
+ & \,\,\,\,\,\,\times{\rm Tr}\left(\hat{\sigma}_{i}^{+}\hat{A}_{j}^{\dagger\eta}\hat{A}_{j}^{\eta}\hat{\rho}\right)
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+Two-atoms case
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+ In order to provide a numerical example to check the expected results from
+ the equations 
+\begin_inset Formula $\eqref{eq:meanfield1}$
+\end_inset
+
+ -
+\begin_inset Formula $\eqref{eq:meanfiel2}$
+\end_inset
+
+ we consider the case where 
+\begin_inset Formula $N=2$
+\end_inset
+
+.
+ To visualize the form of the differential equations we expand the previous
+ equations leading to:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \hat{\sigma}_{1}^{+}\right\rangle  & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{1}}\cdot\left(\left\langle \hat{\sigma}_{1}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{1}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)-2\left(1+{\rm i}\right)\left(A_{21}+A_{12}\right)\left\langle \hat{\sigma}_{1}^{+}\right\rangle \left({\rm Re}\left(\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{2}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,-4\left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)\left\langle \hat{\sigma}_{1}^{+}\right\rangle +8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{1}^{+}\right\rangle \left\langle \hat{\sigma}_{2}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{1}^{z}\right\rangle  & =\frac{1}{\hbar}\left(\overrightarrow{h_{1}}\cdot\left({\rm Im}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right),-{\rm Re}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right),0\right)+\left({\rm Im}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)-{\rm Re}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)\right)\left(A_{21}+A_{12}\right)\left({\rm Re}\left(\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{2}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,-8\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{1}^{z}\right\rangle +8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{1}^{z}\right\rangle \left\langle \hat{\sigma}_{2}^{z}\right\rangle +6\left(\gamma_{+}-\gamma_{-}\right),\\
+\partial_{t}\left\langle \hat{\sigma}_{2}^{+}\right\rangle  & =-\frac{2{\rm i}}{\hbar}\left(\overrightarrow{h_{2}}\cdot\left(\left\langle \hat{\sigma}_{2}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{2}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right)-2\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{2}^{+}\right\rangle \left(A_{12}+A_{21}\right)\left({\rm Re}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{1}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,-4\left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)\left\langle \hat{\sigma}_{2}^{+}\right\rangle +8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{2}^{+}\right\rangle \left\langle \hat{\sigma}_{1}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{2}^{z}\right\rangle  & =\frac{1}{\hbar}\left(\overrightarrow{h_{2}}\cdot\left({\rm Im}\left(\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right),-{\rm Re}\left(\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right),0\right)+\left({\rm Im}\left(\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right)-{\rm Re}\left(\left\langle \hat{\sigma}_{2}^{+}\right\rangle \right)\right)\left(A_{21}+A_{12}\right)\left({\rm Re}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{1}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,-8\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{2}^{z}\right\rangle +8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{2}^{z}\right\rangle \left\langle \hat{\sigma}_{1}^{z}\right\rangle +6\left(\gamma_{+}-\gamma_{-}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Using the notation of Python for arrays and matrices:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\left\langle \hat{\sigma}_{0}^{+}\right\rangle  & =-2{\rm i}\left(\overrightarrow{h_{0}}\cdot\left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{0}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)-2\left(1+{\rm i}\right)\left(A_{10}+A_{01}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left({\rm Re}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{1}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,\,-4\left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle +8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{1}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{0}^{z}\right\rangle  & =\overrightarrow{h_{0}}\cdot\left({\rm Im}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right),-{\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right),0\right)+\left({\rm Im}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)-{\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)\right)\left(A_{10}+A_{01}\right)\left({\rm Re}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{1}^{z}\right\rangle \right)\\
+ & \,\,\,\,\,\,-8\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle +8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{1}^{z}\right\rangle +6\left(\gamma_{+}-\gamma_{-}\right),\\
+\partial_{t}\left\langle \hat{\sigma}_{1}^{+}\right\rangle  & =-2{\rm i}\left(\overrightarrow{h_{1}}\cdot\left(\left\langle \hat{\sigma}_{1}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{1}^{z}\right\rangle ,-\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)-2\left(1+{\rm i}\right)\left\langle \hat{\sigma}_{1}^{+}\right\rangle \left(A_{01}+A_{10}\right)\left({\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,\,-4\left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)\left\langle \hat{\sigma}_{1}^{+}\right\rangle +8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{1}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{1}^{z}\right\rangle  & =\overrightarrow{h_{1}}\cdot\left({\rm Im}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right),-{\rm Re}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right),0\right)+\left({\rm Im}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)-{\rm Re}\left(\left\langle \hat{\sigma}_{1}^{+}\right\rangle \right)\right)\left(A_{10}+A_{01}\right)\left({\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+{\rm Im}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)\\
+ & \,\,\,\,\,\,-8\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{1}^{z}\right\rangle +8\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{1}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +6\left(\gamma_{+}-\gamma_{-}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bibliography
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noindent
+\end_layout
+
+\end_inset
+
+[1] Tucker, K, Barberena, D, Lewis-Swan, RJ, Thompson, JK, Restrepo, JG,
+ Rey, AM 2020 Phys.
+ Rev.
+ A 2469-9926
+\end_layout
+
+\end_body
+\end_document
