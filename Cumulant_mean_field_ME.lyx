@@ -1043,7 +1043,7 @@ Summarizing our equations:
  & \,\,\,\,\,\,\left.-2{\rm i}\left(\left(A_{ii}^{xy}-A_{ii}^{yx}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle -\left(A_{ii}^{yz}-A_{ii}^{zy}+{\rm i}\left(A_{ii}^{zx}-A_{ii}^{xz}\right)\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)-4\left(\gamma_{+}+\gamma_{-}+\gamma_{z}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle ,\\
 \partial_{t}\!\left\langle \hat{\sigma}_{i}^{z}\right\rangle  & =\frac{1}{\hbar}\!\left(2\!\overrightarrow{h}_{i}\!\cdot\!\left({\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right),-{\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right),0\right)+\sum_{j\neq i}\left(\left(A_{ij}^{xx}+A_{ji}^{xx}+A_{ij}^{yy}+A_{ji}^{yy}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{-}\right\rangle \right)-\left(A_{ij}^{yy}-A_{ij}^{xx}+A_{ji}^{yy}-A_{ji}^{xx}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{+}\right\rangle \right)\right.\right.\\
  & \,\,\,\,\,\,\left.+\left(A_{ij}^{xy}-A_{ij}^{yx}+A_{ji}^{yx}-A_{ji}^{xy}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{-}\right\rangle \right)-\left(A_{ij}^{xy}+A_{ji}^{yx}+A_{ij}^{yx}+A_{ji}^{xy}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{+}\right\rangle \right)+2\left(A_{ij}^{xz}+A_{ji}^{zx}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right)-2\left(A_{ij}^{yz}+A_{ji}^{zy}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right)\right)\\
- & \,\,\,\,\,\,\left.+2{\rm i}\left(\left(A_{ii}^{yz}-A_{ii}^{zy}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(A_{ii}^{zx}-A_{ii}^{xz}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\right)\right)+\!4\left(\gamma_{+}-\gamma_{-}\right)-8\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle 
+ & \,\,\,\,\,\,\left.+2{\rm i}\left(\left(A_{ii}^{yz}-A_{ii}^{zy}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)-\left(A_{ii}^{zx}-A_{ii}^{xz}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\right)\right)+\!4\left(\gamma_{+}-\gamma_{-}\right)-8\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle .
 \end{align}
 
 \end_inset
@@ -1506,7 +1506,7 @@ Now we will develop the algebra for
 \hat{\sigma}_{i}^{z}\hat{\sigma}_{i}^{+} & =\hat{\sigma}_{i}^{+},\\
 \hat{\sigma}_{i}^{-}\hat{\sigma}_{i}^{y} & =-{\rm i}\left(\mathbb{I}-\hat{\sigma}_{i}^{z}\right),\\
 \hat{\sigma}_{i}^{y}\hat{\sigma}_{i}^{-} & =-{\rm i}\left(\mathbb{I}+\hat{\sigma}_{i}^{z}\right),\\
-\hat{\sigma}_{i}^{-}\hat{\sigma}_{i}^{z} & =\hat{\sigma}_{i}^{-},
+\hat{\sigma}_{i}^{-}\hat{\sigma}_{i}^{z} & =\hat{\sigma}_{i}^{-}.
 \end{align}
 
 \end_inset
