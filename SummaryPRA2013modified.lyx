@@ -1,0 +1,135 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Summarizing, our set of differential equations is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle  & =-\frac{{\rm i}}{\hbar}\left(\overrightarrow{h}_{i}\cdot\left(\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,-2\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)+\sum_{j\neq i}\left(2\left(A_{ij}^{xx}+A_{ji}^{xx}+{\rm i}\left(A_{ij}^{yx}+A_{ji}^{xy}\right)\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{z}\hat{\sigma}_{j}^{+}\right\rangle \right)+2{\rm i}\left(A_{ij}^{yy}+A_{ji}^{yy}-{\rm i}\left(A_{ij}^{xy}+A_{ji}^{yx}\right)\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{z}\hat{\sigma}_{j}^{+}\right\rangle \right)\right.\right.\\
+ & \,\,\,\,\,-2\left(A_{ij}^{zx}+A_{ji}^{xz}-{\rm i}\left(A_{ij}^{zy}+A_{ji}^{yz}\right)\right)\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{+}\right\rangle -2\left(A_{ij}^{zx}+A_{ji}^{xz}+{\rm i}\left(A_{ij}^{zy}+A_{ji}^{yz}\right)\right)\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{-}\right\rangle +\left(A_{ij}^{xz}+A_{ji}^{zx}+{\rm i}\left(A_{ij}^{yz}+A_{ji}^{zy}\right)\right)\left\langle \hat{\sigma}_{i}^{z}\hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\left.\left.-2\left(A_{ij}^{zz}+A_{ji}^{zz}\right)\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right)+{\rm i}\left(2\left(A_{ii}^{yx}-A_{ii}^{xy}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle +\left(A_{ii}^{yz}-A_{ii}^{zy}+{\rm i}\left(A_{ii}^{zx}-A_{ii}^{xz}\right)\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle \right)\right)-\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{z}\left(t\right)\right\rangle  & =-\frac{{\rm i}}{\hbar}\left(4{\rm i}\overrightarrow{h}_{i}\cdot\left({\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right),-{\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\right)+\sum_{j\neq i}4{\rm i}\left(\left(A_{ij}^{xx}+A_{ji}^{xx}-A_{ij}^{yy}-A_{ji}^{yy}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{+}\right\rangle \right)+\left(A_{ij}^{xx}+A_{ji}^{xx}+A_{ij}^{yy}+A_{ji}^{yy}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{-}\right\rangle \right)\right.\right.\\
+ & \,\,\,\,\,-\left(A_{ij}^{xy}+A_{ji}^{yx}+A_{ij}^{yx}+A_{ji}^{xy}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{+}\right\rangle \right)-\left(A_{ij}^{yx}+A_{ji}^{xy}-A_{ij}^{xy}-A_{ji}^{yx}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{-}\right\rangle \right)\\
+ & \,\,\,\,\,\left.\left.+\left(A_{ij}^{xz}+A_{ji}^{zx}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right)-\left(A_{ij}^{yz}+A_{ji}^{zy}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right)\right)-4\left(\left(A_{ii}^{xz}-A_{ii}^{zx}\right){\rm Re}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)+\left(A_{ii}^{yz}-A_{ii}^{zy}\right){\rm Im}\left(\left\langle \hat{\sigma}_{i}^{+}\right\rangle \right)\right)\right)\\
+ & \,\,\,\,\,+2\left(\gamma_{+}-\gamma_{-}\right)-2\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle  & =-\frac{{\rm i}}{\hbar}\left(\overrightarrow{h_{a}}\cdot\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle ,-2\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle \right)+\overrightarrow{h_{b}}\cdot\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle ,-2\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle \right)\right.\\
+ & +\Theta_{2}\left(N\right)\left(2{\rm i}\left(A_{aa}^{yx}-A_{aa}^{xy}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle +\left(A_{aa}^{xz}-A_{aa}^{zx}+{\rm i}\left(A_{aa}^{yz}-A_{aa}^{zy}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle \right.\\
+ & \,\,\,\,\,\,+2{\rm i}\left(A_{bb}^{yx}-A_{bb}^{xy}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle +\left(A_{bb}^{xz}-A_{bb}^{zx}+{\rm i}\left(A_{bb}^{yz}-A_{bb}^{zy}\right)\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle \\
+ & \,\,\,\,\,\,\left.+\frac{1}{2}\left(A_{ba}^{xx}-A_{ba}^{yy}+{\rm i}\left(A_{ba}^{xy}+A_{ba}^{yx}\right)\right)\left(\left\langle \hat{\sigma}_{a}^{z}\right\rangle +\left\langle \hat{\sigma}_{b}^{z}\right\rangle \right)-\left(A_{ba}^{xz}+{\rm i}A_{ba}^{yz}\right)\left\langle \hat{\sigma}_{a}^{+}\right\rangle -\left(A_{ba}^{zx}+{\rm i}A_{ba}^{zy}\right)\left\langle \hat{\sigma}_{b}^{+}\right\rangle \right)\\
+ & \,\,\,\,\,\,+\Theta_{3}\left(N\right)\sum_{j\neq ab}\left(\left(A_{bj}^{xx}+A_{bj}^{yy}-{\rm i}\left(A_{bj}^{xy}-A_{bj}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{+}\right\rangle +\left(A_{bj}^{xx}-A_{bj}^{yy}+{\rm i}\left(A_{bj}^{xy}+A_{bj}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{-}\right\rangle \right.\\
+ & \,\,\,\,\,\,+\left(A_{bj}^{xz}+{\rm i}A_{bj}^{yz}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{z}\right\rangle -2\left(A_{bj}^{zx}-{\rm i}A_{bj}^{zy}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{+}\right\rangle -2\left(A_{bj}^{zx}+{\rm i}A_{bj}^{zy}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{-}\right\rangle -2A_{bj}^{zz}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\,+\left(A_{ja}^{xx}+A_{ja}^{yy}+{\rm i}\left(A_{ja}^{xy}-A_{ja}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{+}\right\rangle +\left(A_{ja}^{xx}-A_{ja}^{yy}+{\rm i}\left(A_{ja}^{xy}+A_{ja}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{-}\right\rangle \\
+ & \,\,\,\,\,\,\left.-2\left(A_{ja}^{xz}-{\rm i}A_{ja}^{yz}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{+}\right\rangle -2\left(A_{ja}^{xz}+{\rm i}A_{ja}^{yz}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{-}\right\rangle +\left(A_{ja}^{zx}+{\rm i}A_{ja}^{zy}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle -2A_{ja}^{zz}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right)\\
+ & \,\,\,\,\,\,-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle  & =-\frac{{\rm i}}{\hbar}\left(\overrightarrow{h_{a}}\cdot\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{-}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{-}\right\rangle ,-2\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle \right)+\overrightarrow{h_{b}}\cdot\left(-\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle ,{\rm i}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle ,2\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle \right)\right.\\
+ & \,\,\,\,\,\,+\Theta_{2}\left(N\right)\left(2{\rm i}\left(A_{bb}^{xy}-A_{bb}^{yx}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle +\left(A_{bb}^{xz}-A_{bb}^{zx}-{\rm i}\left(A_{bb}^{yz}-A_{bb}^{zy}\right)\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle \right.\\
+ & \,\,\,\,\,\,-2{\rm i}\left(A_{aa}^{xy}-A_{aa}^{yx}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle +\left(A_{aa}^{xz}-A_{aa}^{zx}+{\rm i}\left(A_{aa}^{yz}-A_{aa}^{zy}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle ^{*}\\
+ & \,\,\,\,\,\,\left.+\frac{1}{2}\left(A_{ba}^{xx}+A_{ba}^{yy}+{\rm i}\left(A_{ba}^{xy}-A_{ba}^{yx}\right)\right)\left(\left\langle \hat{\sigma}_{a}^{z}\right\rangle -\left\langle \hat{\sigma}_{b}^{z}\right\rangle \right)-\left(A_{ba}^{xz}-{\rm i}A_{ba}^{yz}\right)\left\langle \hat{\sigma}_{a}^{+}\right\rangle +\left(A_{ba}^{zx}+{\rm i}A_{ba}^{zy}\right)\left\langle \hat{\sigma}_{b}^{-}\right\rangle \right)\\
+ & \,\,\,\,\,\,+\Theta_{3}\left(N\right)\sum_{j\neq a,b}\left(\left(-A_{bj}^{xx}+A_{bj}^{yy}+{\rm i}\left(A_{bj}^{xy}+A_{bj}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{+}\right\rangle +\left(-A_{bj}^{xx}-A_{bj}^{yy}+{\rm i}\left(A_{bj}^{yx}-A_{bj}^{xy}\right)\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{-}\right\rangle \right.\\
+ & \,\,\,\,\,\,+\left(-A_{bj}^{xz}+{\rm i}A_{bj}^{yz}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{z}\right\rangle +2\left(A_{bj}^{zx}-{\rm i}A_{bj}^{zy}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{+}\right\rangle +2\left(A_{bj}^{zx}+{\rm i}A_{bj}^{zy}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{-}\right\rangle +2A_{bj}^{zz}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\,+\left(A_{ja}^{xx}+A_{ja}^{yy}+{\rm i}\left(A_{ja}^{xy}-A_{ja}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{+}\right\rangle +\left(A_{ja}^{xx}-A_{ja}^{yy}+{\rm i}\left(A_{ja}^{xy}+A_{ja}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{-}\right\rangle \\
+ & \,\,\,\,\,\,\left.\left.-2\left(A_{ja}^{xz}-{\rm i}A_{ja}^{yz}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{+}\right\rangle -2\left(A_{ja}^{xz}+{\rm i}A_{ja}^{yz}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{-}\right\rangle +\left(A_{ja}^{zx}+{\rm i}A_{ja}^{zy}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{z}\right\rangle -2A_{ja}^{zz}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{z}\right\rangle \right)\right)\\
+ & \,\,\,\,\,\,-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle  & =-\frac{{\rm i}}{\hbar}\left(\overrightarrow{h_{a}}\cdot\left\langle \left[\hat{\sigma}_{a}^{z},\overrightarrow{\hat{\sigma}_{a}}\right]\hat{\sigma}_{b}^{+}\right\rangle +\overrightarrow{h_{b}}\cdot\left\langle \hat{\sigma}_{a}^{z}\left[\hat{\sigma}_{b}^{+},\overrightarrow{\hat{\sigma}_{b}}\right]\right\rangle \right.\\
+ & \,\,\,\,\,\,+\Theta_{2}\left(N\right)\left(2{\rm i}\left(A_{bb}^{yx}-A_{bb}^{xy}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle +\left(A_{bb}^{xz}-A_{bb}^{zx}+{\rm i}\left(A_{bb}^{yz}-A_{bb}^{zy}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{z}\right\rangle -2\left(A_{aa}^{xz}-A_{aa}^{zx}+{\rm i}\left(A_{aa}^{zy}-A_{aa}^{yz}\right)\right)\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{a}^{+}\right\rangle \right.\\
+ & \,\,\,\,\,\,\left.-2\left(A_{aa}^{xz}-A_{aa}^{zx}+{\rm i}\left(A_{aa}^{yz}-A_{aa}^{zy}\right)\right)\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{a}^{-}\right\rangle +2{\rm Re}\left(\left\langle \hat{\sigma}_{a}^{+}\right\rangle \right)\left(A_{ba}^{yy}-{\rm i}A_{ba}^{xy}\right)+2{\rm i}{\rm Im}\left(\left\langle \hat{\sigma}_{a}^{+}\right\rangle \right)\left(A_{ba}^{xx}+{\rm i}A_{ba}^{yx}\right)+\left(A_{ba}^{xz}+{\rm i}A_{ba}^{yz}\right)\left\langle \hat{\sigma}_{b}^{z}\right\rangle -2A_{ba}^{zz}\left\langle \hat{\sigma}_{b}^{+}\right\rangle \right)\\
+ & \,\,\,\,\,\,+\Theta_{3}\left(N\right)\sum_{j\neq a,b}\left(\left(A_{bj}^{xx}-{\rm i}A_{bj}^{xy}+{\rm i}A_{bj}^{yx}+A_{bj}^{yy}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{+}\right\rangle +\left(A_{bj}^{xx}+{\rm i}A_{bj}^{xy}+{\rm i}A_{bj}^{yx}-A_{bj}^{yy}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{-}\right\rangle +\left(A_{bj}^{xz}+{\rm i}A_{bj}^{yz}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{z}\hat{\sigma}_{j}^{z}\right\rangle \right.\\
+ & \,\,\,\,\,\,-2\left(A_{bj}^{zx}-{\rm i}A_{bj}^{zy}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{+}\right\rangle -2\left(A_{bj}^{zx}+{\rm i}A_{bj}^{zy}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{-}\right\rangle -2A_{bj}^{zz}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\,+2\left(A_{ja}^{xx}-{\rm i}A_{ja}^{xy}-{\rm i}A_{ja}^{yx}-A_{ja}^{yy}\right)\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{+}\hat{\sigma}_{a}^{+}\right\rangle +2\left(A_{ja}^{xx}-{\rm i}A_{ja}^{xy}+{\rm i}A_{ja}^{yx}+A_{ja}^{yy}\right)\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{-}\hat{\sigma}_{a}^{+}\right\rangle \\
+ & \,\,\,\,\,\,+2\left(-A_{ja}^{xx}-{\rm i}A_{ja}^{xy}+{\rm i}A_{ja}^{yx}-A_{ja}^{yy}\right)\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{+}\hat{\sigma}_{a}^{-}\right\rangle +2\left(-A_{ja}^{xx}-{\rm i}A_{ja}^{xy}-{\rm i}A_{ja}^{yx}+A_{ja}^{yy}\right)\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{-}\hat{\sigma}_{a}^{-}\right\rangle \\
+ & \,\,\,\,\,\,\left.\left.+2A_{ja}^{zx}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle -2A_{ja}^{zx}\left\langle \hat{\sigma}_{a}^{-}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle -2{\rm i}A_{ja}^{zy}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle -2{\rm i}A_{ja}^{zy}\left\langle \hat{\sigma}_{a}^{-}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle \right)\right)+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{b}^{+}\right\rangle -\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{z}\right\rangle  & =-\frac{{\rm i}}{\hbar}\left(4{\rm i}\overrightarrow{h_{a}}\cdot\left({\rm Im}\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle \right),-{\rm Re}\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle \right),0\right)+4{\rm i}\overrightarrow{h_{b}}\cdot\left({\rm Im}\left(\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{a}^{z}\right\rangle \right),-{\rm Re}\left(\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{a}^{z}\right\rangle \right),0\right)\right.\\
+ & \,\,\,\,\,\,+\Theta_{2}\left(N\right)\left(-4\left(A_{bb}^{xz}-A_{bb}^{zx}\right){\rm Re}\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle \right)-4\left(A_{bb}^{yz}-A_{bb}^{zy}\right){\rm Im}\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle \right)-4\left(A_{aa}^{xz}-A_{aa}^{zx}\right){\rm Re}\left(\left\langle \hat{\sigma}_{b}^{z}\hat{\sigma}_{a}^{+}\right\rangle \right)-4\left(A_{aa}^{yz}-A_{aa}^{zy}\right){\rm Im}\left(\left\langle \hat{\sigma}_{b}^{z}\hat{\sigma}_{a}^{+}\right\rangle \right)\right.\\
+ & \,\,\,\,\,\,\left.+4{\rm i}\left(A_{ba}^{zx}{\rm Im}\left(\left\langle \hat{\sigma}_{a}^{+}\right\rangle \right)-A_{ba}^{zy}{\rm Re}\left(\left\langle \hat{\sigma}_{a}^{+}\right\rangle \right)+A_{ba}^{xz}{\rm Im}\left(\left\langle \hat{\sigma}_{b}^{+}\right\rangle \right)-A_{ba}^{yz}{\rm Re}\left(\left\langle \hat{\sigma}_{b}^{+}\right\rangle \right)\right)\right)\\
+ & \,\,\,\,\,\,+\Theta_{3}\left(N\right)\sum_{j\neq a,b}\left(2\left(A_{bj}^{xx}-A_{bj}^{yy}-{\rm i}\left(A_{bj}^{xy}+A_{bj}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{+}\right\rangle +2\left(A_{bj}^{xx}+A_{bj}^{yy}+{\rm i}\left(A_{bj}^{xy}-A_{bj}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{-}\right\rangle \right.\\
+ & \,\,\,\,\,\,+2\left(-A_{bj}^{xx}-A_{bj}^{yy}+{\rm i}\left(A_{bj}^{xy}-A_{bj}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{+}\right\rangle +2\left(-A_{bj}^{xx}+A_{bj}^{yy}-{\rm i}\left(A_{bj}^{xy}+A_{bj}^{yx}\right)\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{-}\right\rangle \\
+ & \,\,\,\,\,\,+2\left(A_{bj}^{xz}-{\rm i}A_{bj}^{yz}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle -2\left(A_{bj}^{xz}+{\rm i}A_{bj}^{yz}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{-}\hat{\sigma}_{j}^{z}\right\rangle \\
+ & \,\,\,\,\,\,+2\left(A_{ja}^{xx}-A_{ja}^{yy}-{\rm i}\left(A_{ja}^{xy}+A_{ja}^{yx}\right)\right)\left\langle \hat{\sigma}_{j}^{+}\hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle +2\left(-A_{ja}^{xx}-A_{ja}^{yy}+{\rm i}\left(A_{ja}^{yx}-A_{ja}^{xy}\right)\right)\left\langle \hat{\sigma}_{j}^{+}\hat{\sigma}_{a}^{-}\hat{\sigma}_{b}^{z}\right\rangle \\
+ & \,\,\,\,\,\,+2\left(A_{ja}^{xx}+A_{ja}^{yy}+{\rm i}\left(A_{ja}^{yx}-A_{ja}^{xy}\right)\right)\left\langle \hat{\sigma}_{j}^{-}\hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle +2\left(-A_{ja}^{xx}+A_{ja}^{yy}-{\rm i}\left(A_{ja}^{xy}+A_{ja}^{yx}\right)\right)\left\langle \hat{\sigma}_{j}^{-}\hat{\sigma}_{a}^{-}\hat{\sigma}_{b}^{z}\right\rangle \\
+ & \,\,\,\,\,\,\left.+2\left(A_{ja}^{zx}-{\rm i}A_{ja}^{zy}\right)\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{z}\right\rangle -2\left(A_{ja}^{zx}+{\rm i}A_{ja}^{zy}\right)\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{a}^{-}\hat{\sigma}_{b}^{z}\right\rangle \right)-2\left(\gamma_{-}-\gamma_{+}\right)\left(\left\langle \hat{\sigma}_{b}^{z}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\right\rangle \right)-4\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
