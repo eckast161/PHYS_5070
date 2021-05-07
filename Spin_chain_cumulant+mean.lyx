@@ -1,0 +1,389 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+For the Ising model we found the folowing equations:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{i}^{+}\left(t\right)\right\rangle  & =\frac{2{\rm i}}{\hbar}\sum_{j\neq i}\left(A_{ij}^{zz}+A_{ji}^{zz}\right)\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{i}^{+}\right\rangle -\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{i}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{i}^{z}\left(t\right)\right\rangle  & =2\left(\gamma_{+}-\gamma_{-}\right)-2\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{i}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\sum_{j\neq ab}\left(A_{bj}^{zz}+A_{ja}^{zz}+A_{jb}^{zz}+A_{aj}^{zz}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle \left\langle \hat{\sigma}_{j}^{z}\right\rangle +\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{b}^{+}\right\rangle \left\langle \hat{\sigma}_{a}^{+}\right\rangle +\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{a}^{+}\right\rangle \left\langle \hat{\sigma}_{b}^{+}\right\rangle -2\left\langle \hat{\sigma}_{a}^{+}\right\rangle \left\langle \hat{\sigma}_{b}^{+}\right\rangle \left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle  & \approx-\frac{2{\rm i}}{\hbar}\sum_{j\neq a,b}\left(A_{bj}^{zz}+A_{jb}^{zz}-A_{ja}^{zz}-A_{aj}^{zz}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle \left\langle \hat{\sigma}_{j}^{z}\right\rangle +\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{j}^{z}\right\rangle \left\langle \hat{\sigma}_{b}^{+}\right\rangle ^{*}+\left\langle \hat{\sigma}_{b}^{+}\hat{\sigma}_{j}^{z}\right\rangle ^{*}\left\langle \hat{\sigma}_{a}^{+}\right\rangle -2\left\langle \hat{\sigma}_{a}^{+}\right\rangle \left\langle \hat{\sigma}_{b}^{+}\right\rangle ^{*}\left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{b}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\left(\left(A_{ba}^{zz}+A_{ab}^{zz}\right)\left\langle \hat{\sigma}_{b}^{+}\right\rangle +\sum_{j\neq a,b}\left(A_{bj}^{zz}+A_{jb}^{zz}\right)\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle \left\langle \hat{\sigma}_{j}^{z}\right\rangle +\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{b}^{+}\right\rangle \left\langle \hat{\sigma}_{a}^{z}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{j}^{z}\right\rangle \left\langle \hat{\sigma}_{b}^{+}\right\rangle -2\left\langle \hat{\sigma}_{a}^{z}\right\rangle \left\langle \hat{\sigma}_{b}^{+}\right\rangle \left\langle \hat{\sigma}_{j}^{z}\right\rangle \right)\right)+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{b}^{+}\right\rangle \\
+ & \,\,\,\,\,-\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{z}\right\rangle  & =-2\left(\gamma_{-}-\gamma_{+}\right)\left(\left\langle \hat{\sigma}_{b}^{z}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\right\rangle \right)-4\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{b}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For an infinite spin chain equally spaced between neighbors the key element
+ to differentiate the two-correlation operators such as 
+\begin_inset Formula $\left\langle \hat{\sigma}_{a}^{\alpha}\hat{\sigma}_{b}^{\beta}\right\rangle $
+\end_inset
+
+ is given by 
+\begin_inset Formula $\left|a-b\right|$
+\end_inset
+
+, that is the distance between sites such that 
+\begin_inset Formula $a\neq b$
+\end_inset
+
+.
+ Without lost of generality set 
+\begin_inset Formula $b=0$
+\end_inset
+
+, and 
+\begin_inset Formula $i=0$
+\end_inset
+
+, also the potential are of the form 
+\begin_inset Formula $A_{ij}^{zz}=\frac{J}{d^{\epsilon}\left|i-j\right|^{\epsilon}}$
+\end_inset
+
+, in this case we can assume that we only require to analyze elements of
+ the form 
+\begin_inset Formula $\left\langle \hat{\sigma}_{0}^{+}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle \hat{\sigma}_{0}^{z}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle \hat{\sigma}_{a}^{\alpha}\hat{\sigma}_{0}^{\beta}\right\rangle $
+\end_inset
+
+ with 
+\begin_inset Formula $\alpha,\beta\in\left\{ +,-,z\right\} $
+\end_inset
+
+.
+ Also, we consider that the initial state of each site is the same, so we
+ will have that:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{0}^{+}\left(t\right)\right\rangle  & =\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{0}^{z}\left(t\right)\right\rangle  & =2\left(\gamma_{+}-\gamma_{-}\right)-2\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle  & \approx-\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}+\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}\left\langle \hat{\sigma}_{a}^{+}\right\rangle -2\left|\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right|^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\sum_{j\neq a,0}\frac{1}{\left|j\right|^{\epsilon}}\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{z}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)\right)+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle \\
+ & \,\,\,\,\,-\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{z}\right\rangle  & =-2\left(\gamma_{-}-\gamma_{+}\right)\left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\right\rangle \right)-4\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we can introduce 
+\begin_inset Formula $\sum_{j\neq a,0}\frac{1}{\left|j\right|^{\epsilon}}=2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}$
+\end_inset
+
+, 
+\begin_inset Formula $\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)=\sum_{j\neq a,0}\frac{1}{\left|j\right|^{\epsilon}}+\sum_{j\neq a,0}\frac{1}{\left|j-a\right|^{\epsilon}}=2\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)=0$
+\end_inset
+
+ so:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{0}^{+}\left(t\right)\right\rangle  & =\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{0}^{z}\left(t\right)\right\rangle  & =2\left(\gamma_{+}-\gamma_{-}\right)-2\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \\
+ & =\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle -2\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \right)\right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \\
+ & =\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(2\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle -2\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \right)\right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle  & \approx-\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}+\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}\left\langle \hat{\sigma}_{a}^{+}\right\rangle -2\left|\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right|^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle \\
+ & =-\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle -2\left|\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right|^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)+\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}+\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)\right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle \\
+ & =-\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}+\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\sum_{j\neq a,0}\frac{1}{\left|j\right|^{\epsilon}}\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{z}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)\right)+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle \\
+ & \,\,\,\,\,-\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \\
+ & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{z}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}\right)+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle \\
+ & \,\,\,\,\,-\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{z}\right\rangle  & =-2\left(\gamma_{-}-\gamma_{+}\right)\left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\right\rangle \right)-4\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We define 
+\begin_inset Formula $a_{{\rm cut}}$
+\end_inset
+
+ as the maximum value for which we assume that our cumulant expansion is
+ suitable, for 
+\begin_inset Formula $a>a_{{\rm cut}}$
+\end_inset
+
+ we use the mean-field approximation.
+ Under this description we can write for 
+\begin_inset Formula $\left|c\right|\leq a_{{\rm cut}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\hat{R_{c}}\left(\epsilon\right) & \equiv\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j-c}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}},\\
+ & =\sum_{w\neq-c}\frac{\left\langle \hat{\sigma}_{w}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|w+c\right|^{\epsilon}}\\
+ & =\sum_{w\neq-c,\left|w\right|\leq a_{{\rm cut}}}\frac{\left\langle \hat{\sigma}_{w}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|w+c\right|^{\epsilon}}+\sum_{w\neq-c,\left|w\right|>a_{{\rm cut}}}\frac{\left\langle \hat{\sigma}_{w}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|w+c\right|^{\epsilon}}\\
+ & =\sum_{w\neq-c,\left|w\right|\leq a_{{\rm cut}}}\frac{\left\langle \hat{\sigma}_{w}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|w+c\right|^{\epsilon}}+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{w\neq-c,\left|w\right|>a_{{\rm cut}}}\frac{1}{\left|w+c\right|^{\epsilon}}\\
+ & =\sum_{w\neq-c,\left|w\right|\leq a_{{\rm cut}}}\frac{\left\langle \hat{\sigma}_{w}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|w+c\right|^{\epsilon}}+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{w>a_{{\rm cut}}}\left(\frac{1}{\left|w+c\right|^{\epsilon}}+\frac{1}{\left|w-c\right|^{\epsilon}}\right),\\
+g_{c}\left(\epsilon;a_{{\rm cut}}\right) & \equiv\sum_{w>a_{{\rm cut}}}\left(\frac{1}{\left|w+c\right|^{\epsilon}}+\frac{1}{\left|w-c\right|^{\epsilon}}\right),\\
+s_{c}\left(\epsilon;a_{{\rm cut}}\right) & \equiv\sum_{w\neq-c,\left|w\right|\leq a_{{\rm cut}}}\frac{\left\langle \hat{\sigma}_{w}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|w+c\right|^{\epsilon}},\\
+\hat{R_{c}}\left(\epsilon\right) & =s_{c}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{c}\left(\epsilon;a_{{\rm cut}}\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Summarizing:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{0}^{+}\right\rangle  & =\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{0}^{z}\right\rangle  & =2\left(\gamma_{+}-\gamma_{-}\right)-2\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(2\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle -2\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \right)\right)\\
+ & \,\,\,\,\,-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle  & \approx-\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}+\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{z}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}\right)\\
+ & \,\,\,\,\,+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle -\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle  & =-4\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle -4\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can go further:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula 
+\begin{align}
+\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \right) & =\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle +\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}+\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \\
+ & =\sum_{j\neq a,0}\left(\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}+\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}+\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}+\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}\right)\\
+ & =\sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}+\sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}+\sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}+\sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}\\
+ & =\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\sum_{j\neq a}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\\
+ & \,\,\,\,\,+\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\sum_{j\neq a}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\\
+ & =\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\sum_{j\neq a}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\\
+ & \,\,\,\,\,+\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\sum_{j\neq a}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\\
+ & =\hat{R_{0}}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\hat{R}_{-a}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\hat{R}_{a}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\hat{R_{0}}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\\
+ & =2\hat{R_{0}}\left(\epsilon\right)+\hat{R}_{-a}\left(\epsilon\right)+\hat{R}_{a}\left(\epsilon\right)-\frac{2}{\left|a\right|^{\epsilon}}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \right)\\
+ & =2\left(s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)-\frac{2}{\left|a\right|^{\epsilon}}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \right)\\
+ & \,\,\,\,\,+s_{-a}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{-a}\left(\epsilon;a_{{\rm cut}}\right)+s_{a}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{a}\left(\epsilon;a_{{\rm cut}}\right)\\
+ & =2\left(s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)-\frac{2}{\left|a\right|^{\epsilon}}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \right)\\
+ & \,\,\,\,\,+s_{-a}\left(\epsilon;a_{{\rm cut}}\right)+s_{a}\left(\epsilon;a_{{\rm cut}}\right)+2\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{a}\left(\epsilon;a_{{\rm cut}}\right)\\
+ & =2\left(s_{0}\left(\epsilon;a_{{\rm cut}}\right)+s_{a}\left(\epsilon;a_{{\rm cut}}\right)\right)+2\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(g_{0}\left(\epsilon;a_{{\rm cut}}\right)+g_{a}\left(\epsilon;a_{{\rm cut}}\right)\right)\\
+ & \,\,\,\,\,-\frac{2}{\left|a\right|^{\epsilon}}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \right),\\
+\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}+\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right) & =\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq a,0}\left(\frac{1}{\left|j\right|^{\epsilon}}-\frac{1}{\left|j-a\right|^{\epsilon}}\right)\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}\\
+ & =\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\sum_{j\neq a,0}\left(\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}\right)+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq a,0}\left(\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j-a\right|^{\epsilon}}\right)\\
+ & =\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j\right|^{\epsilon}}-\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq a,0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j-a\right|^{\epsilon}}\\
+ & =\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)-\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\sum_{j\neq a}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\\
+ & \,\,\,\,\,+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j\right|^{\epsilon}}-\left\langle \hat{\sigma}_{0}^{+}\right\rangle \frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}-\left\langle \hat{\sigma}_{0}^{+}\right\rangle \sum_{j\neq a}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j-a\right|^{\epsilon}}+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \frac{\left\langle \hat{\sigma}_{0}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}\\
+ & =\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)-\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\sum_{j\neq a}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j-a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\\
+ & \,\,\,\,\,+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}\right)-\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\sum_{j\neq a}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j-a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}\right)\\
+ & =\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j-a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)-\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\\
+ & \,\,\,\,\,+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}\right)-\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\sum_{j\neq0}\frac{\left\langle \hat{\sigma}_{j+a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|j\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}\right)\\
+ & =\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\hat{R}_{a}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)-\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\hat{R}_{0}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\\
+ & \,\,\,\,\,+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\hat{R}_{0}^{*}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}\right)-\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\hat{R}_{-a}^{*}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}\right)\\
+ & =\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\hat{R}_{a}\left(\epsilon\right)-\hat{R}_{0}\left(\epsilon\right)+\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)+\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\hat{R}_{0}^{*}\left(\epsilon\right)-\hat{R}_{-a}^{*}\left(\epsilon\right)-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}+\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}}{\left|a\right|^{\epsilon}}\right)\\
+ & =2{\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(s_{a}\left(\epsilon;a_{{\rm cut}}\right)-s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(g_{a}\left(\epsilon;a_{{\rm cut}}\right)-g_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)+\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\right).
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Some reductions:
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{0}^{+}\right\rangle  & =\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)-\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{0}^{z}\right\rangle  & =2\left(\gamma_{+}-\gamma_{-}\right)-2\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\left(s_{0}\left(\epsilon;a_{{\rm cut}}\right)+s_{a}\left(\epsilon;a_{{\rm cut}}\right)\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(g_{0}\left(\epsilon;a_{{\rm cut}}\right)+g_{a}\left(\epsilon;a_{{\rm cut}}\right)\right)-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\\
+ & \,\,\,\,\,+\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle -2\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)\right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle  & \approx-\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}{\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(s_{a}\left(\epsilon;a_{{\rm cut}}\right)-s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(g_{a}\left(\epsilon;a_{{\rm cut}}\right)-g_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)+\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{z}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left(s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{0}\left(\epsilon;a_{{\rm cut}}\right)-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\right)\\
+ & \,\,\,\,\,+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle -\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle  & =-4\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle -4\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Separating into dynamic and semi-dynamic terms:
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{0}^{+}\right\rangle  & =\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{0}\left(\epsilon;a_{{\rm cut}}\right)-\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{0}^{z}\right\rangle  & =2\left(\gamma_{+}-\gamma_{-}\right)-2\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(s_{0}\left(\epsilon;a_{{\rm cut}}\right)+s_{a}\left(\epsilon;a_{{\rm cut}}\right)\right)+\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(g_{0}\left(\epsilon;a_{{\rm cut}}\right)+g_{a}\left(\epsilon;a_{{\rm cut}}\right)\right)-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\\
+ & \,\,\,\,\,+\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle -2\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)\right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle  & \approx-\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}{\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(s_{a}\left(\epsilon;a_{{\rm cut}}\right)-s_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)\right)-\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}{\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(g_{a}\left(\epsilon;a_{{\rm cut}}\right)-g_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)+\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\right)\\
+ & \,\,\,\,\,-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{z}\right\rangle s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{z}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{0}\left(\epsilon;a_{{\rm cut}}\right)-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\right)\\
+ & \,\,\,\,\,+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle -\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle  & =-4\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle -4\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reduce even more:
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Formula 
+\begin{align}
+\partial_{t}\!\left\langle \hat{\sigma}_{0}^{+}\right\rangle  & =\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{0}\left(\epsilon;a_{{\rm cut}}\right)-\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{0}^{z}\right\rangle  & =2\left(\gamma_{+}-\gamma_{-}\right)-2\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(s_{0}\left(\epsilon;a_{{\rm cut}}\right)+s_{a}\left(\epsilon;a_{{\rm cut}}\right)\right)+\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(g_{0}\left(\epsilon;a_{{\rm cut}}\right)+g_{a}\left(\epsilon;a_{{\rm cut}}\right)\right)-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle +\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\\
+ & \,\,\,\,\,+\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle -2\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{z}\right\rangle \right)\right)-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle  & \approx-\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}{\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(s_{a}\left(\epsilon;a_{{\rm cut}}\right)-s_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)\right)-\frac{4{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}{\rm Re}\left(\left\langle \hat{\sigma}_{0}^{+}\right\rangle ^{*}\left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle \left(g_{a}\left(\epsilon;a_{{\rm cut}}\right)-g_{0}\left(\epsilon;a_{{\rm cut}}\right)\right)+\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}-\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\right)\\
+ & \,\,\,\,\,-2\left(\gamma_{+}+\gamma_{-}+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{+}\hat{\sigma}_{0}^{-}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle  & \approx\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left\langle \hat{\sigma}_{0}^{z}\right\rangle s_{0}\left(\epsilon;a_{{\rm cut}}\right)+\frac{2{\rm i}}{\hbar}\frac{J}{d^{\epsilon}}\left(\frac{\left\langle \hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}+\left(2\zeta\left(\epsilon\right)-\frac{1}{\left|a\right|^{\epsilon}}\right)\left(\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle \left\langle \hat{\sigma}_{0}^{z}\right\rangle +\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle -2\left\langle \hat{\sigma}_{0}^{z}\right\rangle ^{2}\left\langle \hat{\sigma}_{0}^{+}\right\rangle \right)+\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left(\left\langle \hat{\sigma}_{0}^{z}\right\rangle \left\langle \hat{\sigma}_{0}^{+}\right\rangle g_{0}\left(\epsilon;a_{{\rm cut}}\right)-\frac{\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle }{\left|a\right|^{\epsilon}}\right)\right)\\
+ & \,\,\,\,\,+2\left(\gamma_{+}-\gamma_{-}\right)\left\langle \hat{\sigma}_{0}^{+}\right\rangle -\left(3\left(\gamma_{+}+\gamma_{-}\right)+4\gamma_{z}\right)\left\langle \hat{\sigma}_{a}^{z}\hat{\sigma}_{0}^{+}\right\rangle ,\\
+\partial_{t}\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle  & =-4\left(\gamma_{-}-\gamma_{+}\right)\left\langle \hat{\sigma}_{0}^{z}\right\rangle -4\left(\gamma_{+}+\gamma_{-}\right)\left\langle \hat{\sigma}_{1}^{z}\hat{\sigma}_{0}^{z}\right\rangle .
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
